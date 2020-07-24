@@ -1,0 +1,217 @@
+:root{
+	--color-morado: #321325;
+	--color-negro: #000e08;
+	--color-naranja: #f75c03;
+	--color-azul-claro: #e0fbfc;
+	--color-azul: #c2dfe2;
+	--color-blanco: #fff;
+	--color-negro-puro: #000;
+	--fuente: 'Open Sans', sans-serif;
+}
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: var(--fuente);
+	background-color: var(--color-negro);
+	color: var(--color-blanco);
+	padding: 0 5em;
+}
+
+body::-webkit-scrollbar {
+	width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: rgba(255,255,255, .5);
+	border-radius: 10px;
+}
+
+.chat .chat-icon{
+	position: fixed;
+	right: 1em;
+	bottom: 1em;
+	width: 70px;
+	height: 70px;
+	background-image: url('../assets/Modal mensaje.svg');
+	background-repeat: no-repeat;
+	background-size: contain; 
+}
+
+.navbar{
+	width: 100%;
+	height: 6em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2em 0;
+}
+
+.nav-brand img{
+	width: 7em;
+	vertical-align: middle;
+}
+
+.navbar-links{
+	list-style: none;
+	display: flex;
+}
+
+.navbar-links li{
+	margin: 0 .7em;
+}
+
+.navbar-links .nav-link{
+	color: var(--color-blanco);
+	text-decoration: none;
+}
+
+.hero{
+	width: 100%;
+	height: calc(100vh - 6em);
+	display: grid;
+	grid-gap: 6em;
+	padding-top: 5em;
+	grid-template-columns: 34em 29em;
+	position: relative;
+}
+
+.hero .hero-text{
+	font-weight: 700;
+	font-size: 2rem;
+	padding-top: 1em;
+	line-height: 3.236rem;
+}
+
+.hero .hero-illustrations{
+	background-image: url('../assets/Personajes.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.section{
+	height: 100vh;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.section .intro{
+	max-width: 40em;
+	/*border: 1px solid;*/
+}
+
+.section .intro .title{
+	font-weight: 800;
+	font-size: 5em;
+	margin-bottom: .1em;
+}
+
+.section .intro .subtitle{
+	font-weight: 700;
+	color: var(--color-naranja);
+	font-size: 2.25rem;
+	margin-bottom: .25em;
+}
+
+.section .intro .copy{
+	font-size: 1.39rem;
+	line-height: 2.25rem;
+}
+
+.section-paquetes{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-negro);
+}
+
+.paquetes{
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-gap: 10em;
+	position: relative;
+}
+
+.paquetes::before{
+	content: "Listo para ti";
+	position: absolute;
+	top: -2em;
+	font-weight: 800;
+	font-size: 4em;
+}
+
+
+.paquetes .paquete .header{
+	width: 100%;
+	height: 10em;
+	background: white;
+	border-radius: .5rem;
+	margin-bottom: 1.5em;
+}
+
+.paquetes .paquete .body{
+	font-size: 1rem;
+	line-height: 1.618rem;
+	margin-bottom: 1em;
+}
+
+.paquetes .paquete .footer svg{
+	width: 4em;
+}
+
+.section-custom{
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 4em;
+	justify-content: center;
+	align-items: center;
+}
+
+.section-custom .title{
+	font-weight: 800;
+	font-size: 4rem;
+}
+
+.call-to-action{
+	max-width: 40rem;
+}
+
+.section-custom .custom-copy{
+	font-size: 2rem;
+	line-height: 3.236rem;
+	margin-bottom: 1em;
+}
+
+.section-custom .contact-btn{
+	padding: 1em 1.5em;
+	border: none;
+	outline: none;
+	border-radius: .5em;
+	color: white;
+	background-color: var(--color-naranja);
+	box-shadow: 0 0 5px var(--color-naranja);
+}
+
+.pinContainer {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.panel {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.pinMaster {
+  position: relative;
+}
+

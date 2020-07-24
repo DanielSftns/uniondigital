@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="66" height="44" viewBox="0 0 66 44">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Grupo_210" data-name="Grupo 210" transform="translate(-1608.5 -1981)">
+    <path id="Polígono_1" data-name="Polígono 1" class="cls-1" d="M21.277.755a1,1,0,0,1,1.445,0l19.66,20.553A1,1,0,0,1,41.66,23H2.34a1,1,0,0,1-.723-1.691Z" transform="translate(1674.5 1981) rotate(90)"/>
+    <path id="Polígono_6" data-name="Polígono 6" class="cls-1" d="M21.277.755a1,1,0,0,1,1.445,0l19.66,20.553A1,1,0,0,1,41.66,23H2.34a1,1,0,0,1-.723-1.691Z" transform="translate(1608.5 2025) rotate(-90)"/>
+  </g>
+</svg>

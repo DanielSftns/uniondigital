@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64.005" height="20.254" viewBox="0 0 64.005 20.254">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e0fbfc;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Grupo_380" data-name="Grupo 380" transform="translate(-150 -871)">
+    <g id="Grupo_197" data-name="Grupo 197">
+      <g id="Grupo_196" data-name="Grupo 196" transform="translate(-707.977 1038.122) rotate(-90)">
+        <path id="Trazado_2038" data-name="Trazado 2038" class="cls-1" d="M59.276,22.254a3.376,3.376,0,1,0,3.376,3.376A3.386,3.386,0,0,0,59.276,22.254Zm0-10.127A3.376,3.376,0,1,0,62.651,15.5,3.386,3.386,0,0,0,59.276,12.127Zm0-3.376A3.376,3.376,0,1,0,55.9,5.376,3.386,3.386,0,0,0,59.276,8.751Z" transform="translate(97.803 855.977)"/>
+      </g>
+      <g id="AI_mail" transform="translate(187 871)">
+        <path id="Trazado_319" data-name="Trazado 319" class="cls-1" d="M45.16,28H21.845A1.825,1.825,0,0,0,20,29.845V46.409a1.825,1.825,0,0,0,1.845,1.845H45.16a1.825,1.825,0,0,0,1.845-1.845V29.845A1.825,1.825,0,0,0,45.16,28ZM45.3,46.409a.194.194,0,0,1-.18.18H21.845a.194.194,0,0,1-.18-.18V29.845a.194.194,0,0,1,.18-.18H45.16a.194.194,0,0,1,.18.18V46.409Z" transform="translate(-20 -28)"/>
+        <path id="Trazado_320" data-name="Trazado 320" class="cls-1" d="M47.054,33.62,36.7,41.091a.384.384,0,0,1-.315,0L26.035,33.62c-.315-.18-.63.225-.36.45L35.8,44.2a1.115,1.115,0,0,0,1.53,0L47.459,34.07A.3.3,0,0,0,47.054,33.62Z" transform="translate(-23.064 -31.054)"/>
+      </g>
+    </g>
+  </g>
+</svg>
