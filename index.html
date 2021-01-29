@@ -1,319 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Union Digital</title>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>Document</title>
 </head>
+
 <body>
-	<header>
-		<nav class="navbar">
-			<div class="nav-brand">
-				<a href="#">
-					<img src="assets/Logo completo-04.svg" alt="UnionDigital">
-				</a>
-			</div>
-			<ul class="navbar-links">
-				<li>
-					<a href="#" class="nav-link">Servicios</a>
-				</li>
-				<li>
-					<a href="#" class="nav-link">Portafolio</a>
-				</li>
-				<li>
-					<a href="#" class="nav-link">Nosotros</a>
-				</li>
-				<li>
-					<a href="#" class="nav-link">Aprende</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
+    <header>
+        <nav>
+            <img src="./img/logo.svg" alt="UnionDigital">
 
-	<button id="limites" style="position: fixed; z-index: 1000000; top: 1em; left: 50%; background: white; color: black; padding: 1em;">Mostrar limites</button>
-	
-	<section class="hero">
-		<p class="hero-text">Somos un equipo destinado a usar la tecnología para prestar un servicio de calidad en el area digital. Nuestro fuerte es el trabajo en equipo.</p>
-		<div class="hero-illustrations"></div>
-		
-		<svg class="flechas" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
-		  <defs>
-		    <style>
-		    	.hero .flechas{
-					position: absolute;
-					bottom: 2em;
-					transform: rotate(90deg);
-					animation: to-down 3s ease-in-out infinite;
-				}
-				@keyframes to-down{
-					0%{
-						transform: rotate(90deg) translateX(0px);
-					}
-					50%{
-						transform: rotate(90deg) translateX(20px);
-					}
-					100%{
-						transform: rotate(90deg) translateX(0px);
-					}
-				}
-		      .cls-1 {
-		        fill: #fff;
-		        stroke: #707070;
-		      }
+            <button class="menu-icon"></button>
+            <h5 class="indicador">
+                <span>Servicios | Branding</span>
+                <span>Portafolio</span>
+                <span>Nosotros</span>
+                <span>Nosotros | Equipo</span>
+            </h5>
+        </nav>
+    </header>
 
-		      .cls-2, .cls-4 {
-		        fill: none;
-		      }
+    <div class="hero" data-indicador="0">
+        <p class="copy">Somos un equipo destinado a usar la tecnología para prestar un servicio de calidad en el area digital.</p>
+        <img src="./img/team.svg" alt="team UnionDigital">
+    </div>
 
-		      .cls-3, .cls-5 {
-		        stroke: none;
-		      }
 
-		      .cls-5 {
-		        fill: #000e08;
-		      }
-		    </style>
-		  </defs>
-		  <g id="Grupo_368" data-name="Grupo 368" transform="translate(-707 -865.322)">
-		    <g id="Elipse_51" data-name="Elipse 51" class="cls-1" transform="translate(707 865.322)">
-		      <circle class="cls-3" cx="50" cy="50" r="50"/>
-		      <circle class="cls-4" cx="50" cy="50" r="49.5"/>
-		    </g>
-		    <g id="Polígono_7" data-name="Polígono 7" class="cls-2" transform="translate(710.538 899.283) rotate(-30)">
-		      <path class="cls-3" d="M26.928,7.6a5,5,0,0,1,8.682,0L58.264,47.241a5,5,0,0,1-4.341,7.481H8.616a5,5,0,0,1-4.341-7.481Z"/>
-		      <path class="cls-5" d="M 31.2692756652832 12.09338760375977 L 10.33907318115234 48.72122955322266 L 52.19947814941406 48.72122955322266 L 31.2692756652832 12.09338760375977 M 31.26927185058594 5.077823638916016 C 32.96001052856445 5.077823638916016 34.65074920654297 5.917591094970703 35.61048889160156 7.597126007080078 L 58.26386260986328 47.24053955078125 C 60.16859817504883 50.57382965087891 57.76177215576172 54.72122955322266 53.92265319824219 54.72122955322266 L 8.615890502929688 54.72122955322266 C 4.776782989501953 54.72122955322266 2.369945526123047 50.57382965087891 4.274677276611328 47.24053955078125 L 26.92806243896484 7.597126007080078 C 27.88779830932617 5.917591094970703 29.57853317260742 5.077823638916016 31.26927185058594 5.077823638916016 Z"/>
-		    </g>
-		  </g>
-		</svg>
-	</section>
+    <section class="servicios" data-indicador="0">
 
-	<div class="pinMaster pinMaster1">
-	    <div class="pinContainer">
-			<section class="panel section">
-				<div class="intro">
-					<h2 class="title">Desarrollo Web</h2>
-					<h3 class="subtitle">Obtén tu sitio web, al mejor precio</h3>
-					<p class="copy">Tener una pagina web de tu marca te genera muchos beneficios. Manejamos las mejores tecnologias y prácticas del momento tanto en el frontend como en el backend.</p>
-				</div>
-			</section>
+        <div class="card paquete">
+            <img src="./img/2.png" alt="logo" class="portada">
+            <div class="info">
+                <h2 class="title">Logo</h2>
+                <h2 class="price">$30</h2>
+                <p class="sub-title">En el formato que necesites</p>
+                <div class="detalles">
+                    <p>Logotipo estilo minimalista con variantes, entregaremos el logo en el formato que requieras. Al seleccionar este paquete nos pondremos en contacto contigo.</p>
+                    <button class="call-to-action">Seleccionar</button>
+                </div>
+            </div>
+        </div>
 
-			<section class="panel section-paquetes">
-				<div class="paquetes">
-					<div class="paquete">
-						<div class="header"></div>
-						<p class="body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus reprehenderit animi odit ratione porro illum, veritatis placeat. Iste minima fugiat in, ipsum, eaque quam quidem sequi officiis doloribus quod temporibus.</p>
-						<div class="footer">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.005 20.254">
-							  <defs>
-							    <style>
-							      .cls-1 {
-							        fill: #e0fbfc;
-							        fill-rule: evenodd;
-							      }
-							    </style>
-							  </defs>
-							  <g id="Grupo_380" data-name="Grupo 380" transform="translate(-150 -871)">
-							    <g id="Grupo_197" data-name="Grupo 197">
-							      <g id="Grupo_196" data-name="Grupo 196" transform="translate(-707.977 1038.122) rotate(-90)">
-							        <path id="Trazado_2038" data-name="Trazado 2038" class="cls-1" d="M59.276,22.254a3.376,3.376,0,1,0,3.376,3.376A3.386,3.386,0,0,0,59.276,22.254Zm0-10.127A3.376,3.376,0,1,0,62.651,15.5,3.386,3.386,0,0,0,59.276,12.127Zm0-3.376A3.376,3.376,0,1,0,55.9,5.376,3.386,3.386,0,0,0,59.276,8.751Z" transform="translate(97.803 855.977)"/>
-							      </g>
-							      <g id="AI_mail" transform="translate(187 871)">
-							        <path id="Trazado_319" data-name="Trazado 319" class="cls-1" d="M45.16,28H21.845A1.825,1.825,0,0,0,20,29.845V46.409a1.825,1.825,0,0,0,1.845,1.845H45.16a1.825,1.825,0,0,0,1.845-1.845V29.845A1.825,1.825,0,0,0,45.16,28ZM45.3,46.409a.194.194,0,0,1-.18.18H21.845a.194.194,0,0,1-.18-.18V29.845a.194.194,0,0,1,.18-.18H45.16a.194.194,0,0,1,.18.18V46.409Z" transform="translate(-20 -28)"/>
-							        <path id="Trazado_320" data-name="Trazado 320" class="cls-1" d="M47.054,33.62,36.7,41.091a.384.384,0,0,1-.315,0L26.035,33.62c-.315-.18-.63.225-.36.45L35.8,44.2a1.115,1.115,0,0,0,1.53,0L47.459,34.07A.3.3,0,0,0,47.054,33.62Z" transform="translate(-23.064 -31.054)"/>
-							      </g>
-							    </g>
-							  </g>
-							</svg>
-						</div>
-					</div>
+        <div class="card paquete">
+            <img src="./img/1.png" alt="logo + guia de marca" class="portada">
+            <div class="info">
+                <h2 class="title">Logo + guia de marca</h2>
+                <h2 class="price">$50</h2>
+                <p class="sub-title">pequeña guia que se amolda a tus necesidades</p>
+                <div class="detalles">
+                    <p>Al seleccionar este paquete nos pondremos en contacto contigo.</p>
+                    <button class="call-to-action">Seleccionar</button>
+                </div>
+            </div>
+        </div>
 
-					<div class="paquete">
-						<div class="header"></div>
-						<p class="body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus reprehenderit animi odit ratione porro illum, veritatis placeat. Iste minima fugiat in, ipsum, eaque quam quidem sequi officiis doloribus quod temporibus.</p>
-						<div class="footer">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.005 20.254">
-							  <defs>
-							    <style>
-							      .cls-1 {
-							        fill: #e0fbfc;
-							        fill-rule: evenodd;
-							      }
-							    </style>
-							  </defs>
-							  <g id="Grupo_380" data-name="Grupo 380" transform="translate(-150 -871)">
-							    <g id="Grupo_197" data-name="Grupo 197">
-							      <g id="Grupo_196" data-name="Grupo 196" transform="translate(-707.977 1038.122) rotate(-90)">
-							        <path id="Trazado_2038" data-name="Trazado 2038" class="cls-1" d="M59.276,22.254a3.376,3.376,0,1,0,3.376,3.376A3.386,3.386,0,0,0,59.276,22.254Zm0-10.127A3.376,3.376,0,1,0,62.651,15.5,3.386,3.386,0,0,0,59.276,12.127Zm0-3.376A3.376,3.376,0,1,0,55.9,5.376,3.386,3.386,0,0,0,59.276,8.751Z" transform="translate(97.803 855.977)"/>
-							      </g>
-							      <g id="AI_mail" transform="translate(187 871)">
-							        <path id="Trazado_319" data-name="Trazado 319" class="cls-1" d="M45.16,28H21.845A1.825,1.825,0,0,0,20,29.845V46.409a1.825,1.825,0,0,0,1.845,1.845H45.16a1.825,1.825,0,0,0,1.845-1.845V29.845A1.825,1.825,0,0,0,45.16,28ZM45.3,46.409a.194.194,0,0,1-.18.18H21.845a.194.194,0,0,1-.18-.18V29.845a.194.194,0,0,1,.18-.18H45.16a.194.194,0,0,1,.18.18V46.409Z" transform="translate(-20 -28)"/>
-							        <path id="Trazado_320" data-name="Trazado 320" class="cls-1" d="M47.054,33.62,36.7,41.091a.384.384,0,0,1-.315,0L26.035,33.62c-.315-.18-.63.225-.36.45L35.8,44.2a1.115,1.115,0,0,0,1.53,0L47.459,34.07A.3.3,0,0,0,47.054,33.62Z" transform="translate(-23.064 -31.054)"/>
-							      </g>
-							    </g>
-							  </g>
-							</svg>
-						</div>
-					</div>
+        <div class="card paquete">
+            <img src="./img/1.png" alt="logo + guia de marca" class="portada">
+            <div class="info">
+                <h2 class="title">Logo + guia de marca</h2>
+                <h2 class="price">$50</h2>
+                <p class="sub-title">pequeña guia que se amolda a tus necesidades</p>
+                <div class="detalles">
+                    <p>Al seleccionar este paquete nos pondremos en contacto contigo.</p>
+                    <button class="call-to-action">Seleccionar</button>
+                </div>
+            </div>
+        </div>
 
-					<div class="paquete">
-						<div class="header"></div>
-						<p class="body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus reprehenderit animi odit ratione porro illum, veritatis placeat. Iste minima fugiat in, ipsum, eaque quam quidem sequi officiis doloribus quod temporibus.</p>
-						<div class="footer">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.005 20.254">
-							  <defs>
-							    <style>
-							      .cls-1 {
-							        fill: #e0fbfc;
-							        fill-rule: evenodd;
-							      }
-							    </style>
-							  </defs>
-							  <g id="Grupo_380" data-name="Grupo 380" transform="translate(-150 -871)">
-							    <g id="Grupo_197" data-name="Grupo 197">
-							      <g id="Grupo_196" data-name="Grupo 196" transform="translate(-707.977 1038.122) rotate(-90)">
-							        <path id="Trazado_2038" data-name="Trazado 2038" class="cls-1" d="M59.276,22.254a3.376,3.376,0,1,0,3.376,3.376A3.386,3.386,0,0,0,59.276,22.254Zm0-10.127A3.376,3.376,0,1,0,62.651,15.5,3.386,3.386,0,0,0,59.276,12.127Zm0-3.376A3.376,3.376,0,1,0,55.9,5.376,3.386,3.386,0,0,0,59.276,8.751Z" transform="translate(97.803 855.977)"/>
-							      </g>
-							      <g id="AI_mail" transform="translate(187 871)">
-							        <path id="Trazado_319" data-name="Trazado 319" class="cls-1" d="M45.16,28H21.845A1.825,1.825,0,0,0,20,29.845V46.409a1.825,1.825,0,0,0,1.845,1.845H45.16a1.825,1.825,0,0,0,1.845-1.845V29.845A1.825,1.825,0,0,0,45.16,28ZM45.3,46.409a.194.194,0,0,1-.18.18H21.845a.194.194,0,0,1-.18-.18V29.845a.194.194,0,0,1,.18-.18H45.16a.194.194,0,0,1,.18.18V46.409Z" transform="translate(-20 -28)"/>
-							        <path id="Trazado_320" data-name="Trazado 320" class="cls-1" d="M47.054,33.62,36.7,41.091a.384.384,0,0,1-.315,0L26.035,33.62c-.315-.18-.63.225-.36.45L35.8,44.2a1.115,1.115,0,0,0,1.53,0L47.459,34.07A.3.3,0,0,0,47.054,33.62Z" transform="translate(-23.064 -31.054)"/>
-							      </g>
-							    </g>
-							  </g>
-							</svg>
-						</div>
-					</div>
-				</div>
-			</section>
-	    </div>
-	</div>
+    </section>
 
-	<div class="pinMaster pinMaster2">
-	    <div class="pinContainer">
-			<section class="panel section">
-				<div class="intro">
-					<h2 class="title">Branding</h2>
-					<h3 class="subtitle">Dale identidad a tu empresa</h3>
-					<p class="copy">El branding o Diseño de marca es primordial en una empresa. Estamos capacitados para creación de logos, platillas para redes sociales, selección de paleta entre otros.</p>
-				</div>
-			</section>
+    <section class="portafolio" data-indicador="1">
 
-			<section class="panel section-paquetes">
-				<div class="paquetes">
-					<div class="paquete">
-						<div class="header"></div>
-						<p class="body">2222222Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus reprehenderit animi odit ratione porro illum, veritatis placeat. Iste minima fugiat in, ipsum, eaque quam quidem sequi officiis doloribus quod temporibus.</p>
-						<div class="footer">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.005 20.254">
-							  <defs>
-							    <style>
-							      .cls-1 {
-							        fill: #e0fbfc;
-							        fill-rule: evenodd;
-							      }
-							    </style>
-							  </defs>
-							  <g id="Grupo_380" data-name="Grupo 380" transform="translate(-150 -871)">
-							    <g id="Grupo_197" data-name="Grupo 197">
-							      <g id="Grupo_196" data-name="Grupo 196" transform="translate(-707.977 1038.122) rotate(-90)">
-							        <path id="Trazado_2038" data-name="Trazado 2038" class="cls-1" d="M59.276,22.254a3.376,3.376,0,1,0,3.376,3.376A3.386,3.386,0,0,0,59.276,22.254Zm0-10.127A3.376,3.376,0,1,0,62.651,15.5,3.386,3.386,0,0,0,59.276,12.127Zm0-3.376A3.376,3.376,0,1,0,55.9,5.376,3.386,3.386,0,0,0,59.276,8.751Z" transform="translate(97.803 855.977)"/>
-							      </g>
-							      <g id="AI_mail" transform="translate(187 871)">
-							        <path id="Trazado_319" data-name="Trazado 319" class="cls-1" d="M45.16,28H21.845A1.825,1.825,0,0,0,20,29.845V46.409a1.825,1.825,0,0,0,1.845,1.845H45.16a1.825,1.825,0,0,0,1.845-1.845V29.845A1.825,1.825,0,0,0,45.16,28ZM45.3,46.409a.194.194,0,0,1-.18.18H21.845a.194.194,0,0,1-.18-.18V29.845a.194.194,0,0,1,.18-.18H45.16a.194.194,0,0,1,.18.18V46.409Z" transform="translate(-20 -28)"/>
-							        <path id="Trazado_320" data-name="Trazado 320" class="cls-1" d="M47.054,33.62,36.7,41.091a.384.384,0,0,1-.315,0L26.035,33.62c-.315-.18-.63.225-.36.45L35.8,44.2a1.115,1.115,0,0,0,1.53,0L47.459,34.07A.3.3,0,0,0,47.054,33.62Z" transform="translate(-23.064 -31.054)"/>
-							      </g>
-							    </g>
-							  </g>
-							</svg>
-						</div>
-					</div>
+        <div class="card">
+            <img src="./img/Group 411.png" alt="farias fundación" class="portada">
+            <div class="info">
+                <h2 class="title">Farias Fundación</h2>
+                <p class="sub-title">Pagina web</p>
+            </div>
+        </div>
 
-					<div class="paquete">
-						<div class="header"></div>
-						<p class="body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus reprehenderit animi odit ratione porro illum, veritatis placeat. Iste minima fugiat in, ipsum, eaque quam quidem sequi officiis doloribus quod temporibus.</p>
-						<div class="footer">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.005 20.254">
-							  <defs>
-							    <style>
-							      .cls-1 {
-							        fill: #e0fbfc;
-							        fill-rule: evenodd;
-							      }
-							    </style>
-							  </defs>
-							  <g id="Grupo_380" data-name="Grupo 380" transform="translate(-150 -871)">
-							    <g id="Grupo_197" data-name="Grupo 197">
-							      <g id="Grupo_196" data-name="Grupo 196" transform="translate(-707.977 1038.122) rotate(-90)">
-							        <path id="Trazado_2038" data-name="Trazado 2038" class="cls-1" d="M59.276,22.254a3.376,3.376,0,1,0,3.376,3.376A3.386,3.386,0,0,0,59.276,22.254Zm0-10.127A3.376,3.376,0,1,0,62.651,15.5,3.386,3.386,0,0,0,59.276,12.127Zm0-3.376A3.376,3.376,0,1,0,55.9,5.376,3.386,3.386,0,0,0,59.276,8.751Z" transform="translate(97.803 855.977)"/>
-							      </g>
-							      <g id="AI_mail" transform="translate(187 871)">
-							        <path id="Trazado_319" data-name="Trazado 319" class="cls-1" d="M45.16,28H21.845A1.825,1.825,0,0,0,20,29.845V46.409a1.825,1.825,0,0,0,1.845,1.845H45.16a1.825,1.825,0,0,0,1.845-1.845V29.845A1.825,1.825,0,0,0,45.16,28ZM45.3,46.409a.194.194,0,0,1-.18.18H21.845a.194.194,0,0,1-.18-.18V29.845a.194.194,0,0,1,.18-.18H45.16a.194.194,0,0,1,.18.18V46.409Z" transform="translate(-20 -28)"/>
-							        <path id="Trazado_320" data-name="Trazado 320" class="cls-1" d="M47.054,33.62,36.7,41.091a.384.384,0,0,1-.315,0L26.035,33.62c-.315-.18-.63.225-.36.45L35.8,44.2a1.115,1.115,0,0,0,1.53,0L47.459,34.07A.3.3,0,0,0,47.054,33.62Z" transform="translate(-23.064 -31.054)"/>
-							      </g>
-							    </g>
-							  </g>
-							</svg>
-						</div>
-					</div>
+        <div class="card">
+            <img src="./img/2.png" alt="David Marabay" class="portada">
+            <div class="info">
+                <h2 class="title">David Marabay</h2>
+                <p class="sub-title">Branding</p>
+            </div>
+        </div>
 
-					<div class="paquete">
-						<div class="header"></div>
-						<p class="body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus reprehenderit animi odit ratione porro illum, veritatis placeat. Iste minima fugiat in, ipsum, eaque quam quidem sequi officiis doloribus quod temporibus.</p>
-						<div class="footer">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.005 20.254">
-							  <defs>
-							    <style>
-							      .cls-1 {
-							        fill: #e0fbfc;
-							        fill-rule: evenodd;
-							      }
-							    </style>
-							  </defs>
-							  <g id="Grupo_380" data-name="Grupo 380" transform="translate(-150 -871)">
-							    <g id="Grupo_197" data-name="Grupo 197">
-							      <g id="Grupo_196" data-name="Grupo 196" transform="translate(-707.977 1038.122) rotate(-90)">
-							        <path id="Trazado_2038" data-name="Trazado 2038" class="cls-1" d="M59.276,22.254a3.376,3.376,0,1,0,3.376,3.376A3.386,3.386,0,0,0,59.276,22.254Zm0-10.127A3.376,3.376,0,1,0,62.651,15.5,3.386,3.386,0,0,0,59.276,12.127Zm0-3.376A3.376,3.376,0,1,0,55.9,5.376,3.386,3.386,0,0,0,59.276,8.751Z" transform="translate(97.803 855.977)"/>
-							      </g>
-							      <g id="AI_mail" transform="translate(187 871)">
-							        <path id="Trazado_319" data-name="Trazado 319" class="cls-1" d="M45.16,28H21.845A1.825,1.825,0,0,0,20,29.845V46.409a1.825,1.825,0,0,0,1.845,1.845H45.16a1.825,1.825,0,0,0,1.845-1.845V29.845A1.825,1.825,0,0,0,45.16,28ZM45.3,46.409a.194.194,0,0,1-.18.18H21.845a.194.194,0,0,1-.18-.18V29.845a.194.194,0,0,1,.18-.18H45.16a.194.194,0,0,1,.18.18V46.409Z" transform="translate(-20 -28)"/>
-							        <path id="Trazado_320" data-name="Trazado 320" class="cls-1" d="M47.054,33.62,36.7,41.091a.384.384,0,0,1-.315,0L26.035,33.62c-.315-.18-.63.225-.36.45L35.8,44.2a1.115,1.115,0,0,0,1.53,0L47.459,34.07A.3.3,0,0,0,47.054,33.62Z" transform="translate(-23.064 -31.054)"/>
-							      </g>
-							    </g>
-							  </g>
-							</svg>
-						</div>
-					</div>
-				</div>
-			</section>
-	    </div>
-	</div>
+    </section>
 
-	<section class="section-custom">
-		<h2 class="title">Tú decides</h2>
-		<div class="call-to-action">
-			<p class="custom-copy">Si quieres algún paquete o quieres simplemente hacer algo a tu medida y con tus propios requisitos, puedes contactarnos y concretaremos el mejor presupuesto para ti.</p>
-			<button class="contact-btn">Contactanos</button>
-		</div>
-	</section>
+    <section class="nosotros" data-indicador="2">
+        <div>
+            <p>Emprendimiento que formamos mediados del año 2019, 4 jóvenes Venezolanos estudiantes de ingeniería de sistemas en la Universidad de oriente.</p>
+            <img src="./img/top-view-photo-of-people-having-a-meeting-3183165.png" alt="nosotros">
+            <p>Prestamos servicios en el ámbito digital, así mismo creamos proyectos tecnológicos</p>
+        </div>
+    </section>
 
-	<!-- <section class="portafolio">
-		
-	</section> -->
+    <section class="team" data-indicador="3">
+        <div class="miembro">
+            <div class="header">
+                <img class="avatar" src="./img/Group 418.png" alt="Ricardo Bellorin">
+                <div class="info">
+                    <h2 class="name">Ricardo Bellorin</h2>
+                    <h3 class="skills">Diseñador Grafico</h3>
 
-	<div class="chat">
-		<div class="chat-icon"></div>
-		<div class="chat-container"></div>
-	</div>
+                    <button class="call-to-action">Portafolio</button>
+                </div>
+            </div>
+            <p class="quote">Cuando trabajas lo que te gusta, ¿Qué podría salir mal? Comunicativo, responsable y atento... Se ve bien, pero... ¿Funciona?</p>
+        </div>
+    </section>
 
-	<script src="./js/gsap.min.js"></script>
-	<script src="./js/ScrollMagic.min.js"></script>
-	<script src="./js/animation.gsap.min.js"></script>
-	<script src="./js/debug.addIndicators.min.js"></script>
+    <button class="chat-icon"></button>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.5.2/smooth-scrollbar.js"></script>
+    <script>
+        const paquetes = document.querySelectorAll('.paquete')
 
-	<script src="./js/app.js"></script>
+        paquetes.forEach(paquete => {
+            const detalles = paquete.querySelector('.detalles')
+            const detallesHeight = detalles.offsetHeight
+            detalles.style.height = `${detallesHeight}px`
+            detalles.classList.add('hidden')
 
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+            paquete.addEventListener('click', () => {
+                detalles.classList.toggle('hidden')
+            })
+        })
+
+        const options = {
+            threshold: 0.5
+        }
+
+        const indicador = document.querySelector('.indicador')
+
+        function callback(entries, observer) {
+            if (entries[0].isIntersecting && entries.length == 1) {
+                const index = parseInt(entries[0].target.dataset.indicador)
+                indicador.querySelectorAll('span').forEach((span, i) => {
+                    if (i < index) {
+                        span.style.transform = 'translateY(-200%)'
+                    } else if (i > index) {
+                        span.style.transform = 'translateY(0%)'
+                    } else {
+                        span.style.transform = 'translateY(-100%)'
+                    }
+                })
+            } else {
+                if (entries[0].target.dataset.indicador == '0' && entries[0].boundingClientRect.top > 0) {
+                    indicador.querySelectorAll('span')[0].style.transform = 'translateY(0%)'
+                }
+            }
+        }
+
+        const observer = new IntersectionObserver(callback, options)
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section)
+        })
+    </script>
 </body>
+
 </html>

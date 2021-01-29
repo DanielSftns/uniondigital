@@ -1,217 +1,234 @@
-:root{
-	--color-morado: #321325;
-	--color-negro: #000e08;
-	--color-naranja: #f75c03;
-	--color-azul-claro: #e0fbfc;
-	--color-azul: #c2dfe2;
-	--color-blanco: #fff;
-	--color-negro-puro: #000;
-	--fuente: 'Open Sans', sans-serif;
-}
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-body{
-	font-family: var(--fuente);
-	background-color: var(--color-negro);
-	color: var(--color-blanco);
-	padding: 0 5em;
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('../fonts/FontsFree-Net-ProximaNova-Regular.ttf');
 }
 
-body::-webkit-scrollbar {
-	width: 12px;
+@font-face {
+    font-family: 'ProximaNovaBold';
+    font-weight: bold;
+    src: url('../fonts/FontsFree-Net-Proxima-Nova-Bold.otf');
 }
 
-body::-webkit-scrollbar-thumb {
-	background: rgba(255,255,255, .5);
-	border-radius: 10px;
+:root {
+    --color-primary: #f75c03;
 }
 
-.chat .chat-icon{
-	position: fixed;
-	right: 1em;
-	bottom: 1em;
-	width: 70px;
-	height: 70px;
-	background-image: url('../assets/Modal mensaje.svg');
-	background-repeat: no-repeat;
-	background-size: contain; 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.navbar{
-	width: 100%;
-	height: 6em;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 2em 0;
+body {
+    background-color: rgb(8, 8, 8);
+    color: #fff;
+    padding: 1em 1.25em;
+    font-family: 'ProximaNova';
 }
 
-.nav-brand img{
-	width: 7em;
-	vertical-align: middle;
+.chat-icon {
+    position: fixed;
+    bottom: 2em;
+    right: 1em;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    background-image: url('../img/chat_icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75%;
+    border: none;
+    outline: none;
 }
 
-.navbar-links{
-	list-style: none;
-	display: flex;
+header {
+    background-color: rgb(8, 8, 8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1em 1.25em;
 }
 
-.navbar-links li{
-	margin: 0 .7em;
+header nav {
+    background-color: rgb(8, 8, 8);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
-.navbar-links .nav-link{
-	color: var(--color-blanco);
-	text-decoration: none;
+.menu-icon {
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    background-image: url('../img/menu_icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    outline: none;
 }
 
-.hero{
-	width: 100%;
-	height: calc(100vh - 6em);
-	display: grid;
-	grid-gap: 6em;
-	padding-top: 5em;
-	grid-template-columns: 34em 29em;
-	position: relative;
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.hero .hero-text{
-	font-weight: 700;
-	font-size: 2rem;
-	padding-top: 1em;
-	line-height: 3.236rem;
+.hero .copy {
+    margin-bottom: 2em;
+    font-size: 1.2em;
+    line-height: calc(1em * 1.618);
 }
 
-.hero .hero-illustrations{
-	background-image: url('../assets/Personajes.svg');
-	background-repeat: no-repeat;
-	background-size: contain;
+.indicador {
+    text-transform: uppercase;
+    font-family: 'ProximaNovaBold';
+    color: #595959;
+    font-size: 0.7em;
+    width: 100%;
+    height: 1em;
+    position: absolute;
+    bottom: -2em;
+    overflow: hidden;
+    left: 0;
+    background-color: rgb(8, 8, 8);
 }
 
-.section{
-	height: 100vh;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
+.indicador span {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -1em;
+    transition: transform 0.5s ease;
 }
 
-.section .intro{
-	max-width: 40em;
-	/*border: 1px solid;*/
+.card {
+    width: 100%;
+    margin-bottom: 2em;
 }
 
-.section .intro .title{
-	font-weight: 800;
-	font-size: 5em;
-	margin-bottom: .1em;
+.card .portada {
+    width: 100%;
+    margin-bottom: 1em;
 }
 
-.section .intro .subtitle{
-	font-weight: 700;
-	color: var(--color-naranja);
-	font-size: 2.25rem;
-	margin-bottom: .25em;
+.card .info .title,
+.card .info .price {
+    display: inline-block;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    font-weight: 400;
 }
 
-.section .intro .copy{
-	font-size: 1.39rem;
-	line-height: 2.25rem;
+.card.paquete .info .title {
+    border-right: 3px solid #595959;
+    padding-right: 1em;
 }
 
-.section-paquetes{
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: var(--color-negro);
+.card .info .price {
+    padding-left: 1em;
 }
 
-.paquetes{
-	width: 100%;
-	display: grid;
-	grid-template-columns: repeat(3,1fr);
-	grid-gap: 10em;
-	position: relative;
+.card .sub-title {
+    color: #595959;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-family: 'ProximaNovaBold';
 }
 
-.paquetes::before{
-	content: "Listo para ti";
-	position: absolute;
-	top: -2em;
-	font-weight: 800;
-	font-size: 4em;
+.card .detalles {
+    opacity: 1;
+    transition: height 1s ease;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid #595959;
 }
 
-
-.paquetes .paquete .header{
-	width: 100%;
-	height: 10em;
-	background: white;
-	border-radius: .5rem;
-	margin-bottom: 1.5em;
+.card .detalles.hidden {
+    height: 0 !important;
+    opacity: 0;
 }
 
-.paquetes .paquete .body{
-	font-size: 1rem;
-	line-height: 1.618rem;
-	margin-bottom: 1em;
+.card .detalles p {
+    margin-bottom: 1em;
+    text-align: left;
 }
 
-.paquetes .paquete .footer svg{
-	width: 4em;
+.call-to-action {
+    background-color: #f75c03;
+    padding: 0.5em 1.25em;
+    border-radius: 0.25rem;
+    outline: none;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1em #f75c03;
+    margin-bottom: 1em;
+    font-family: 'ProximaNovaBold';
 }
 
-.section-custom{
-	width: 100%;
-	height: 100vh;
-	display: grid;
-	grid-template-columns: auto auto;
-	grid-gap: 4em;
-	justify-content: center;
-	align-items: center;
+.nosotros div {
+    text-align: right;
+    font-size: 1.2em;
 }
 
-.section-custom .title{
-	font-weight: 800;
-	font-size: 4rem;
+.nosotros p {
+    width: 80%;
+    margin-bottom: 0.5em;
+    text-align: left;
 }
 
-.call-to-action{
-	max-width: 40rem;
+.nosotros img {
+    width: 50%;
+    margin-bottom: 0.5em;
 }
 
-.section-custom .custom-copy{
-	font-size: 2rem;
-	line-height: 3.236rem;
-	margin-bottom: 1em;
+.team {
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
 }
 
-.section-custom .contact-btn{
-	padding: 1em 1.5em;
-	border: none;
-	outline: none;
-	border-radius: .5em;
-	color: white;
-	background-color: var(--color-naranja);
-	box-shadow: 0 0 5px var(--color-naranja);
+.miembro .header {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: 2em;
+    align-items: center;
 }
 
-.pinContainer {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-}
-.panel {
-  height: 100%;
-  width: 100%;
-  position: absolute;
+.miembro .info {
+    text-align: center;
+    line-height: 1.7em;
 }
 
-.pinMaster {
-  position: relative;
+.miembro .name {
+    font-size: 1.2em;
+    display: inline-block;
+    border-bottom: 2px solid #595959;
 }
 
+.miembro .skills {
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #595959;
+    margin-bottom: 1em;
+    padding: 0 0.5em;
+    text-transform: uppercase;
+}
+
+.miembro .call-to-action {
+    font-size: 0.5em;
+}
+
+.miembro .quote {
+    font-size: 1.2em;
+}

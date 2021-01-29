@@ -1,0 +1,13 @@
+<svg id="AI_chat" xmlns="http://www.w3.org/2000/svg" width="43.716" height="37.932" viewBox="0 0 43.716 37.932">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Path_306" data-name="Path 306" class="cls-1" d="M50.091,30H33.625A13.6,13.6,0,0,0,20,43.518h0A13.551,13.551,0,0,0,33.625,57.036H44.554l-2.7,9.542a1.353,1.353,0,0,0,2.332.94l8.889-10.771A13.519,13.519,0,0,0,63.716,43.59h0A13.613,13.613,0,0,0,50.091,30Zm7.723,21.253a10.962,10.962,0,0,1-7.723,3.181H33.625A10.962,10.962,0,0,1,25.9,51.253a10.76,10.76,0,0,1,0-15.325,10.962,10.962,0,0,1,7.723-3.181H50.019a10.962,10.962,0,0,1,7.723,3.181,10.848,10.848,0,0,1,.073,15.325Z" transform="translate(-20 -30)"/>
+  <circle id="Ellipse_1" data-name="Ellipse 1" cx="2.307" cy="2.307" r="2.307" transform="translate(11.193 11.137)"/>
+  <circle id="Ellipse_2" data-name="Ellipse 2" cx="2.307" cy="2.307" r="2.307" transform="translate(19.551 11.137)"/>
+  <circle id="Ellipse_3" data-name="Ellipse 3" cx="2.307" cy="2.307" r="2.307" transform="translate(27.909 11.137)"/>
+</svg>
