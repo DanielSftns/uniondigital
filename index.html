@@ -5,122 +5,301 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-
-    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/intlTelInput.min.css">
+    <title>UnionDigital</title>
 </head>
 
 <body>
+    <style>
+        .iti__flag {
+            background-image: url("./img/flags.png");
+        }
+        
+        @media (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi) {
+            .iti__flag {
+                background-image: url("./img/flags@2x.png");
+            }
+        }
+    </style>
+
+    <div class="vista_formulario">
+        <form class="formulario" action="">
+            <button type="button" class="close"></button>
+            <div>
+                <input id="paquete_selecionado" type="text" hidden>
+                <h4 class="title">Dejanos tus datos y nos encargaremos de contactarte</h4>
+                <div class="row">
+                    <label for="name">NOMBRE</label>
+                    <div class="">
+                        <input type="text" id="name" name="name" placeholder="Ejemplo">
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="tel">NUMERO TELEFONICO</label>
+                    <div class="">
+                        <input id="phone" name="tel" type="tel">
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="email">CORREO ELECTRONICO</label>
+                    <div class="">
+                        <input type="email" id="email" name="correo" placeholder="ejemplo@ejemplo.com">
+                    </div>
+                </div>
+
+                <button class="call-to-action" type="submit">ENVIAR</button>
+            </div>
+
+            <div class="messaje_pos_send">
+                <p>Excelente, en breve nos comunicaremos contigo.</p>
+                <img class="check" src="./img/check.svg">
+            </div>
+        </form>
+    </div>
+
     <header>
         <nav>
             <img src="./img/logo.svg" alt="UnionDigital">
 
-            <button class="menu-icon"></button>
-            <h5 class="indicador">
-                <span>Servicios | Branding</span>
-                <span>Portafolio</span>
-                <span>Nosotros</span>
-                <span>Nosotros | Equipo</span>
-            </h5>
+            <button class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="53.512" height="35.675" viewBox="0 0 53.512 35.675">
+                    <defs>
+                      <style>
+                            .menu-icon svg{
+                                overflow: visible;
+                            }
+
+                            .menu-icon .bar{
+                                fill: #fff;
+                                transform-origin: center;
+                                transition: all 0.5s ease;
+                            }
+
+                            .menu-icon.active .bar2{
+                                opacity: 0;
+                            }
+
+                            .menu-icon.active .bar1{
+                                transform: translate(-10px, 10px) rotate(45deg);
+                            }
+                            .menu-icon.active .bar3{
+                                transform: translate(-10px, -10px) rotate(-45deg);
+                            }
+                      </style>
+                    </defs>
+                    <rect class="bar bar1" x="0" y="0" rx="3" width="53.512" height="6"></rect>
+                    <rect class="bar bar2" x="0" y="14.7" rx="3" width="53.512" height="6"></rect>
+                    <rect class="bar bar3" x="0" y="29.5" rx="3" width="53.512" height="6"></rect>
+                </svg>
+            </button>
         </nav>
+        <h5 class="indicador active">
+            <span>Servicios | Branding</span>
+            <span>Portafolio</span>
+            <span>Nosotros</span>
+            <span>Nosotros | Equipo</span>
+        </h5>
     </header>
 
-    <div class="hero" data-indicador="0">
-        <p class="copy">Somos un equipo destinado a usar la tecnología para prestar un servicio de calidad en el area digital.</p>
-        <img src="./img/team.svg" alt="team UnionDigital">
-    </div>
+    <main class="container">
+        <ul class="menu">
+            <li>
+                <a class="link" href="#">Servicios</a>
+            </li>
+            <li>
+                <a class="link" href="#">Portafolio</a>
+            </li>
+            <li>
+                <a class="link" href="#">Nosotros</a>
+            </li>
+        </ul>
 
-
-    <section class="servicios" data-indicador="0">
-
-        <div class="card paquete">
-            <img src="./img/2.png" alt="logo" class="portada">
-            <div class="info">
-                <h2 class="title">Logo</h2>
-                <h2 class="price">$30</h2>
-                <p class="sub-title">En el formato que necesites</p>
-                <div class="detalles">
-                    <p>Logotipo estilo minimalista con variantes, entregaremos el logo en el formato que requieras. Al seleccionar este paquete nos pondremos en contacto contigo.</p>
-                    <button class="call-to-action">Seleccionar</button>
-                </div>
-            </div>
+        <div class="hero" data-indicador="0">
+            <p class="copy">Somos un equipo destinado a usar la tecnología para prestar un servicio de calidad en el area digital.</p>
+            <img src="./img/team.svg" alt="team UnionDigital">
         </div>
 
-        <div class="card paquete">
-            <img src="./img/1.png" alt="logo + guia de marca" class="portada">
-            <div class="info">
-                <h2 class="title">Logo + guia de marca</h2>
-                <h2 class="price">$50</h2>
-                <p class="sub-title">pequeña guia que se amolda a tus necesidades</p>
-                <div class="detalles">
-                    <p>Al seleccionar este paquete nos pondremos en contacto contigo.</p>
-                    <button class="call-to-action">Seleccionar</button>
-                </div>
-            </div>
-        </div>
+        <section class="servicios" data-indicador="0">
 
-        <div class="card paquete">
-            <img src="./img/1.png" alt="logo + guia de marca" class="portada">
-            <div class="info">
-                <h2 class="title">Logo + guia de marca</h2>
-                <h2 class="price">$50</h2>
-                <p class="sub-title">pequeña guia que se amolda a tus necesidades</p>
-                <div class="detalles">
-                    <p>Al seleccionar este paquete nos pondremos en contacto contigo.</p>
-                    <button class="call-to-action">Seleccionar</button>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="portafolio" data-indicador="1">
-
-        <div class="card">
-            <img src="./img/Group 411.png" alt="farias fundación" class="portada">
-            <div class="info">
-                <h2 class="title">Farias Fundación</h2>
-                <p class="sub-title">Pagina web</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="./img/2.png" alt="David Marabay" class="portada">
-            <div class="info">
-                <h2 class="title">David Marabay</h2>
-                <p class="sub-title">Branding</p>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="nosotros" data-indicador="2">
-        <div>
-            <p>Emprendimiento que formamos mediados del año 2019, 4 jóvenes Venezolanos estudiantes de ingeniería de sistemas en la Universidad de oriente.</p>
-            <img src="./img/top-view-photo-of-people-having-a-meeting-3183165.png" alt="nosotros">
-            <p>Prestamos servicios en el ámbito digital, así mismo creamos proyectos tecnológicos</p>
-        </div>
-    </section>
-
-    <section class="team" data-indicador="3">
-        <div class="miembro">
-            <div class="header">
-                <img class="avatar" src="./img/Group 418.png" alt="Ricardo Bellorin">
+            <div class="card paquete">
+                <img src="./img/2.png" alt="logo" class="portada">
                 <div class="info">
-                    <h2 class="name">Ricardo Bellorin</h2>
-                    <h3 class="skills">Diseñador Grafico</h3>
-
-                    <button class="call-to-action">Portafolio</button>
+                    <h2 class="title">Logo <span class="price">$30</span></h2>
+                    <p class="sub-title">En el formato que necesites</p>
+                    <div class="detalles">
+                        <p>Logotipo estilo minimalista con variantes, entregaremos el logo en el formato que requieras. Al seleccionar este paquete nos pondremos en contacto contigo.</p>
+                        <button class="call-to-action">Seleccionar</button>
+                    </div>
                 </div>
             </div>
-            <p class="quote">Cuando trabajas lo que te gusta, ¿Qué podría salir mal? Comunicativo, responsable y atento... Se ve bien, pero... ¿Funciona?</p>
-        </div>
-    </section>
 
-    <button class="chat-icon"></button>
+            <div class="card paquete">
+                <img src="./img/1.png" alt="logo + guia de marca" class="portada">
+                <div class="info">
+                    <h2 class="title">Logo + guia de marca <span class="price">$50</span></h2>
+                    <p class="sub-title">pequeña guia que se amolda a tus necesidades</p>
+                    <div class="detalles">
+                        <p>Al seleccionar este paquete nos pondremos en contacto contigo.</p>
+                        <button class="call-to-action">Seleccionar</button>
+                    </div>
+                </div>
+            </div>
 
+            <div class="card paquete">
+                <img src="./img/1.png" alt="logo + guia de marca" class="portada">
+                <div class="info">
+                    <h2 class="title">Logo + guia de marca <span class="price">$50</span></h2>
+                    <p class="sub-title">pequeña guia que se amolda a tus necesidades</p>
+                    <div class="detalles">
+                        <p>Al seleccionar este paquete nos pondremos en contacto contigo.</p>
+                        <button class="call-to-action">Seleccionar</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="portafolio" data-indicador="1">
+
+            <div class="card">
+                <img src="./img/Group 411.png" alt="farias fundación" class="portada">
+                <div class="info">
+                    <h2 class="title">Farias Fundación</h2>
+                    <p class="sub-title">Pagina web</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./img/2.png" alt="David Marabay" class="portada">
+                <div class="info">
+                    <h2 class="title">David Marabay</h2>
+                    <p class="sub-title">Branding</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="nosotros" data-indicador="2">
+            <div>
+                <p>Emprendimiento que formamos mediados del año 2019, 4 jóvenes Venezolanos estudiantes de ingeniería de sistemas en la Universidad de oriente.</p>
+                <img src="./img/top-view-photo-of-people-having-a-meeting-3183165.png" alt="nosotros">
+                <p>Prestamos servicios en el ámbito digital, así mismo creamos proyectos tecnológicos</p>
+            </div>
+        </section>
+
+        <section class="team" data-indicador="3">
+            <div class="miembro">
+                <div class="header">
+                    <img class="avatar" src="./img/Ricardo.svg" alt="Ricardo Bellorin">
+                    <div class="info">
+                        <h2 class="name">Ricardo Bellorin</h2>
+                        <h3 class="skills">Diseñador Grafico</h3>
+
+                        <div class="contact">
+                            <a target="_blank" class="icon icon-behance" href="#"></a>
+                            <a target="_blank" class="icon icon-instagram" href="#"></a>
+                        </div>
+                    </div>
+                </div>
+                <p class="quote">Cuando trabajas lo que te gusta, ¿Qué podría salir mal? Comunicativo, responsable y atento... Se ve bien, pero... ¿Funciona?</p>
+            </div>
+
+            <div class="miembro">
+                <div class="header">
+                    <img class="avatar" src="./img/Daniel.svg" alt="Daniel Sifontes">
+                    <div class="info">
+                        <h2 class="name">Daniel Sifontes</h2>
+                        <h3 class="skills">Frontend Developer</h3>
+
+                        <div class="contact">
+                            <a target="_blank" class="icon icon-fiverr" href="#"></a>
+                            <a target="_blank" class="icon icon-github" href="#"></a>
+                            <a target="_blank" class="icon icon-instagram" href="#"></a>
+                        </div>
+                    </div>
+                </div>
+                <p class="quote">Hagamos tu idea de negocio realidad! Personalmente comprometido con lo que hago y me apasiona :)</p>
+            </div>
+
+            <div class="miembro">
+                <div class="header">
+                    <img class="avatar" src="./img/Jesus.svg" alt="Jesus Robles">
+                    <div class="info">
+                        <h2 class="name">Jesus Robles</h2>
+                        <h3 class="skills">Diseñador Grafico</h3>
+
+                        <div class="contact">
+                            <a target="_blank" class="icon icon-behance" href="#"></a>
+                            <a target="_blank" class="icon icon-instagram" href="#"></a>
+                        </div>
+                    </div>
+                </div>
+                <p class="quote">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio explicabo omnis non! Aspernatur animi id dolores qui</p>
+            </div>
+
+            <div class="miembro">
+                <div class="header">
+                    <img class="avatar" src="./img/David.svg" alt="David Marabay">
+                    <div class="info">
+                        <h2 class="name">David Marabay</h2>
+                        <h3 class="skills">Backend Developer</h3>
+
+                        <div class="contact">
+                            <a target="_blank" class="icon icon-github" href="#"></a>
+                            <a target="_blank" class="icon icon-instagram" href="#"></a>
+                        </div>
+                    </div>
+                </div>
+                <p class="quote">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio explicabo omnis non! Aspernatur animi id dolores qui</p>
+            </div>
+        </section>
+
+        <button class="chat-icon"></button>
+    </main>
+
+    <script src="./js/intlTelInput.min.js"></script>
     <script>
+        const menuIcon = document.querySelector('.menu-icon')
+        const menu = document.querySelector('.menu')
+        const indicador = document.querySelector('.indicador')
         const paquetes = document.querySelectorAll('.paquete')
+        const buttonsPaquetes = document.querySelectorAll('.paquete button')
+        const vistaFormulario = document.querySelector('.vista_formulario')
+        const buttonCerrarFormulario = vistaFormulario.querySelector('.close')
+        const buttonSubmitFormulario = vistaFormulario.querySelector('.call-to-action')
 
+        // SETEAR ESTYLOS Y CONFIGUARION
+        const headerHeight = document.querySelector('header').offsetHeight
+        document.querySelector('.hero').style.height = `calc(100vh - ${headerHeight}px)`
+        document.querySelector('.menu').style.top = `${headerHeight}px`
+        
+        const inputTlf = document.querySelector("#phone")
+        const iti = window.intlTelInput(inputTlf, {
+            preferredCountries: ["ve", "us"],
+            initialCountry: "VE",
+            geoIpLookup: function(success, failure) {
+                fetch('https://ipapi.co/json/')
+                    .then(function(response) {
+                        response.json().then(jsonData => {
+                            success(jsonData.country_code)
+                        });
+                    })
+                    .catch(function(error) {
+                        console.log(error)
+                    });
+            },
+            utilsScript: './js/utils.js'
+        });
+
+        // EVENTOS CLICK
+        menuIcon.addEventListener('click', ()=> {
+            menuIcon.classList.toggle('active')
+            menu.classList.toggle('active')
+            indicador.classList.toggle('active')
+        })
+        
         paquetes.forEach(paquete => {
             const detalles = paquete.querySelector('.detalles')
             const detallesHeight = detalles.offsetHeight
@@ -132,13 +311,74 @@
             })
         })
 
-        const options = {
-            threshold: 0.5
-        }
+        buttonsPaquetes.forEach(buttonPaquete => {
+            buttonPaquete.addEventListener('click', ()=> {
+                vistaFormulario.querySelector('#paquete_selecionado').value = buttonPaquete.parentNode.parentNode.querySelector('.title').textContent
+                vistaFormulario.classList.add('active')
+            })
+        })
+        buttonCerrarFormulario.addEventListener('click', ()=> {
+            vistaFormulario.classList.remove('active')
+        })
 
-        const indicador = document.querySelector('.indicador')
+        buttonSubmitFormulario.addEventListener('click', (e)=>{
+            e.preventDefault()
+            const name = vistaFormulario.querySelector('#name')
+            const email = vistaFormulario.querySelector('#email')
+            const paqueteSelecionado = vistaFormulario.querySelector('#paquete_selecionado').value
 
-        function callback(entries, observer) {
+            name.parentNode.classList.remove('error')
+            inputTlf.parentNode.classList.remove('error')
+            email.parentNode.classList.remove('error')
+
+            if(name.value == ''){
+                name.parentNode.classList.add('error')
+                return
+            }
+
+            if(email.value =='' && inputTlf.value ==''){
+                vistaFormulario.querySelector('.formulario').classList.add('error')
+                return
+            }else{
+                if(!iti.isValidNumber() && inputTlf.value !=''){
+                    inputTlf.parentNode.parentNode.classList.add('error')
+                    return
+                }
+    
+                const regexEmail = /[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+/
+                if(!regexEmail.test(email.value) && email.value !=''){
+                    email.parentNode.classList.add('error')
+                    return
+                }
+            }
+
+
+
+            // ENVIAR DATA A API
+            const data = {
+                paquete: paqueteSelecionado,
+                nombre: name.value.trim(),
+                telefono: inputTlf.value.trim(),
+                correo: email.value.trim()
+            }
+
+            console.log(data)
+
+            document.querySelector('.messaje_pos_send').classList.add('active')
+
+            setTimeout(()=>{
+                buttonCerrarFormulario.click()
+                document.querySelector('.messaje_pos_send').classList.remove('active')
+                inputTlf.value =''
+                name.value =''
+                email.value =''
+            }, 5000)
+        })
+
+
+        // INDICADOR
+
+        function setIndicador(entries, observer) {
             if (entries[0].isIntersecting && entries.length == 1) {
                 const index = parseInt(entries[0].target.dataset.indicador)
                 indicador.querySelectorAll('span').forEach((span, i) => {
@@ -157,11 +397,49 @@
             }
         }
 
-        const observer = new IntersectionObserver(callback, options)
+        const observer = new IntersectionObserver(setIndicador, {
+            threshold: 0.5
+        })
 
         document.querySelectorAll('section').forEach(section => {
             observer.observe(section)
         })
+
+        // SLIDER MIEMBROS
+
+        const miembros = document.querySelectorAll('.miembro')
+        function sliderMembers(current = 0) {
+            let index = current == miembros.length ? 0 : current
+            if (index > 0) {
+                miembros[index - 1].style.animation = 'toLeft 1s ease-out forwards'
+            } else {
+                miembros[miembros.length - 1].style.animation = 'toLeft 1s ease-out forwards'
+            }
+            miembros[index].style.animation = 'toCenter 1s ease-out forwards'
+
+            setTimeout(() => {
+                sliderMembers(index + 1)
+            }, 8000)
+        }
+        sliderMembers()
+
+
+        // LIBRERIA TELEFONO
+        const resetInputTlf = () => {
+            inputTlf.parentNode.parentNode.classList.remove('error')
+        }
+
+        inputTlf.addEventListener('blur', ()=> {
+            resetInputTlf()
+            if (inputTlf.value.trim()) {
+                if (!iti.isValidNumber()) {
+                    inputTlf.parentNode.parentNode.classList.add('error')
+                }
+            }
+        });
+
+        inputTlf.addEventListener('change', resetInputTlf);
+        inputTlf.addEventListener('keyup', resetInputTlf);
     </script>
 </body>
 
