@@ -24,6 +24,57 @@
         }
     </style>
 
+    <div class="loader active">
+        <div class="icon loading">
+            <div class="ud">
+                <svg id="UDGROUP" data-name="UD GROUP" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.8 50.35">
+                <defs>
+                    <style>
+                        .loader.active .icon .cls-1{
+                            fill: #f75c03;
+                            stroke-width: 0;
+                            stroke-dashoffset: 0;
+                            animation: none;
+                        }
+
+                        .loader.active .icon.loading .cls-1{
+                            fill: transparent;
+                            stroke: #f75c03;
+                            stroke-width: .35px;
+                            stroke-dasharray: 700;
+                            stroke-dashoffset: 0;
+                            animation: loading 5s cubic-bezier(.61,.33,.14,.72) infinite;
+                            animation-direction: alternate;
+                        }
+
+                        @keyframes loading {
+                            0%{
+                                stroke-dashoffset: 700;
+                                  fill: transparent;
+                            }
+                            80%{
+                                fill: transparent;
+                                stroke-width: .35px;
+                            }
+                            100%{
+                                stroke-dashoffset: 0;
+                                  fill: #f75c03;
+                                  stroke-width: 0;
+                            }
+                        }
+                    </style>
+                </defs>
+                <g id="UD">
+                    <path class="cls-1" d="M83.81,31.45a24.77,24.77,0,0,0-9-5,38.52,38.52,0,0,0-11.62-1.62H43.66a3.76,3.76,0,0,0-4,3.94V51.68a5.44,5.44,0,0,1-1.35,4,5.18,5.18,0,0,1-3.88,1.36c-2.52,0-3.49-1-3.81-1.34a5.59,5.59,0,0,1-1.31-4V28.77a3.79,3.79,0,0,0-4.14-3.94H12.7a4.31,4.31,0,0,0-2.92,1A3.8,3.8,0,0,0,8.6,28.77V51c0,7.82,2.26,13.87,6.71,18a21.68,21.68,0,0,0,8.24,4.65,36.11,36.11,0,0,0,10.89,1.5h1.48a29.66,29.66,0,0,0,8.42-1.64A27.52,27.52,0,0,0,53,68.71,24.7,24.7,0,0,0,58.41,62l.15-.35h0l0,0v0h4.51a11.34,11.34,0,0,0,8.4-3.24A11.53,11.53,0,0,0,74.73,50a11.53,11.53,0,0,0-3.2-8.42,11.34,11.34,0,0,0-8.4-3.24h-6.8V51c0,6.73-1.76,11.66-5.4,15s-9.17,5.1-16.48,5.1S21.68,69.46,18,66.08,12.6,57.77,12.6,51V28.83H25.31V51.68a9.46,9.46,0,0,0,2.43,6.82,8.88,8.88,0,0,0,6.69,2.56,9.06,9.06,0,0,0,6.73-2.54,9.34,9.34,0,0,0,2.5-6.84V28.83H63.19c7.71,0,13.76,1.89,18,5.62S87.4,43.26,87.4,50s-2,11.83-6.24,15.55-10.26,5.62-18,5.62H55.1a15.4,15.4,0,0,1-1.66,1.92,16.67,16.67,0,0,1-2.6,2.08H63.19a38.52,38.52,0,0,0,11.62-1.62,24.77,24.77,0,0,0,9-5c5-4.46,7.59-10.7,7.59-18.55S88.85,35.91,83.81,31.45ZM60.7,42.34h2.43a7.42,7.42,0,0,1,5.56,2,7.59,7.59,0,0,1,2,5.61,7.59,7.59,0,0,1-2,5.61,7.42,7.42,0,0,1-5.56,2H60.7Z" transform="translate(-8.6 -24.83)"/>
+                </g>
+            </svg>
+            </div>
+            <div class="letras">
+                <img src="./img/UnionDigitalLetras.svg">
+            </div>
+        </div>
+    </div>
+
     <div class="vista_formulario">
         <form class="formulario" action="">
             <button type="button" class="close"></button>
@@ -106,13 +157,16 @@
     <main class="container">
         <ul class="menu">
             <li>
-                <a class="link" href="#">Servicios</a>
+                <button class="link" data-href="#servicios">Servicios</button>
             </li>
             <li>
-                <a class="link" href="#">Portafolio</a>
+                <button class="link" data-href="#portafolio">Portafolio</button>
             </li>
             <li>
-                <a class="link" href="#">Nosotros</a>
+                <button class="link" data-href="#nosotros">Nosotros</button>
+            </li>
+            <li>
+                <button class="link" data-href="#team">Equipo</button>
             </li>
         </ul>
 
@@ -121,7 +175,7 @@
             <img src="./img/team.svg" alt="team UnionDigital">
         </div>
 
-        <section class="servicios" data-indicador="0">
+        <section class="servicios" id="servicios" data-indicador="0">
 
             <div class="card paquete">
                 <img src="./img/2.png" alt="logo" class="portada">
@@ -161,10 +215,22 @@
 
         </section>
 
-        <section class="portafolio" data-indicador="1">
+        <section class="portafolio" id="portafolio" data-indicador="1">
 
             <div class="card">
-                <img src="./img/Group 411.png" alt="farias fundación" class="portada">
+                <div class="portada">
+                    <img src="./img/2.png" alt="David Marabay">
+                </div>
+                <div class="info">
+                    <h2 class="title">David Marabay</h2>
+                    <p class="sub-title">Branding</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="portada animation">
+                    <img src="./img/farias_fundacion.png" alt="farias fundación">
+                </div>
                 <div class="info">
                     <h2 class="title">Farias Fundación</h2>
                     <p class="sub-title">Pagina web</p>
@@ -172,16 +238,28 @@
             </div>
 
             <div class="card">
-                <img src="./img/2.png" alt="David Marabay" class="portada">
+                <div class="portada animation">
+                    <img src="./img/soymilaortiz.png" alt="SoyMilaOrtyz">
+                </div>
                 <div class="info">
-                    <h2 class="title">David Marabay</h2>
-                    <p class="sub-title">Branding</p>
+                    <h2 class="title">SoyMilaOrtyz</h2>
+                    <p class="sub-title">Pagina web</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="portada animation">
+                    <img src="./img/infobreakingbad.png" alt="infoBreakingBad">
+                </div>
+                <div class="info">
+                    <h2 class="title">info Breaking Bad</h2>
+                    <p class="sub-title">Pagina web</p>
                 </div>
             </div>
 
         </section>
 
-        <section class="nosotros" data-indicador="2">
+        <section class="nosotros" id="nosotros" data-indicador="2">
             <div>
                 <p>Emprendimiento que formamos mediados del año 2019, 4 jóvenes Venezolanos estudiantes de ingeniería de sistemas en la Universidad de oriente.</p>
                 <img src="./img/top-view-photo-of-people-having-a-meeting-3183165.png" alt="nosotros">
@@ -189,7 +267,7 @@
             </div>
         </section>
 
-        <section class="team" data-indicador="3">
+        <section class="team" id="team" data-indicador="3">
             <div class="miembro">
                 <div class="header">
                     <img class="avatar" src="./img/Ricardo.svg" alt="Ricardo Bellorin">
@@ -260,6 +338,10 @@
     </main>
 
     <script src="./js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+
     <script>
         const menuIcon = document.querySelector('.menu-icon')
         const menu = document.querySelector('.menu')
@@ -269,177 +351,238 @@
         const vistaFormulario = document.querySelector('.vista_formulario')
         const buttonCerrarFormulario = vistaFormulario.querySelector('.close')
         const buttonSubmitFormulario = vistaFormulario.querySelector('.call-to-action')
+        const portadasPortafolioCards = document.querySelectorAll('.portada.animation')
 
-        // SETEAR ESTYLOS Y CONFIGUARION
-        const headerHeight = document.querySelector('header').offsetHeight
-        document.querySelector('.hero').style.height = `calc(100vh - ${headerHeight}px)`
-        document.querySelector('.menu').style.top = `${headerHeight}px`
+        setTimeout(()=>{
+			if(document.readyState == 'complete'){
+				finalizarLoading();
+			}else{
+				const interval = setInterval(()=>{
+					if(document.readyState == 'complete'){
+						finalizarLoading();
+						clearInterval(interval);
+					}
+				},10000);
+			}
+		},5000);
+
+		function finalizarLoading(){
+			document.querySelector('.icon').classList.remove('loading');
+			setTimeout(()=>{
+				document.querySelector('.loader').classList.remove('active');
+			},4000)
+		}
         
-        const inputTlf = document.querySelector("#phone")
-        const iti = window.intlTelInput(inputTlf, {
-            preferredCountries: ["ve", "us"],
-            initialCountry: "VE",
-            geoIpLookup: function(success, failure) {
-                fetch('https://ipapi.co/json/')
-                    .then(function(response) {
-                        response.json().then(jsonData => {
-                            success(jsonData.country_code)
+        window.addEventListener('load', () => {
+            // SETEAR ESTYLOS Y CONFIGUARION
+            const headerHeight = document.querySelector('header').offsetHeight
+            document.querySelector('.hero').style.height = `calc(100vh - ${headerHeight}px)`
+            document.querySelector('.team').style.height = `calc(100vh - ${headerHeight}px)`
+            document.querySelector('.menu').style.top = `${headerHeight}px`
+
+            portadasPortafolioCards.forEach(portada => {
+                portada.style.height = portada.offsetHeight / 2 + 'px'
+            })
+
+            const inputTlf = document.querySelector("#phone")
+            const iti = window.intlTelInput(inputTlf, {
+                preferredCountries: ["ve", "us"],
+                initialCountry: "VE",
+                geoIpLookup: function(success, failure) {
+                    fetch('https://ipapi.co/json/')
+                        .then(function(response) {
+                            response.json().then(jsonData => {
+                                success(jsonData.country_code)
+                            });
+                        })
+                        .catch(function(error) {
+                            console.log(error)
                         });
+                },
+                utilsScript: './js/utils.js'
+            });
+
+            // EVENTOS CLICK
+            menuIcon.addEventListener('click', () => {
+                menuIcon.classList.toggle('active')
+                menu.classList.toggle('active')
+                indicador.classList.toggle('active')
+            })
+            menu.querySelectorAll('button').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const direction = e.currentTarget.dataset.href
+                    const distance = document.querySelector(`${direction}`).getClientRects()[0].top - headerHeight
+                    menuIcon.click()
+                    gsap.to(window, {
+                        duration: 2,
+                        scrollTo: window.scrollY + distance,
+                        ease: Cubic.linear
                     })
-                    .catch(function(error) {
-                        console.log(error)
-                    });
-            },
-            utilsScript: './js/utils.js'
-        });
-
-        // EVENTOS CLICK
-        menuIcon.addEventListener('click', ()=> {
-            menuIcon.classList.toggle('active')
-            menu.classList.toggle('active')
-            indicador.classList.toggle('active')
-        })
-        
-        paquetes.forEach(paquete => {
-            const detalles = paquete.querySelector('.detalles')
-            const detallesHeight = detalles.offsetHeight
-            detalles.style.height = `${detallesHeight}px`
-            detalles.classList.add('hidden')
-
-            paquete.addEventListener('click', () => {
-                detalles.classList.toggle('hidden')
-            })
-        })
-
-        buttonsPaquetes.forEach(buttonPaquete => {
-            buttonPaquete.addEventListener('click', ()=> {
-                vistaFormulario.querySelector('#paquete_selecionado').value = buttonPaquete.parentNode.parentNode.querySelector('.title').textContent
-                vistaFormulario.classList.add('active')
-            })
-        })
-        buttonCerrarFormulario.addEventListener('click', ()=> {
-            vistaFormulario.classList.remove('active')
-        })
-
-        buttonSubmitFormulario.addEventListener('click', (e)=>{
-            e.preventDefault()
-            const name = vistaFormulario.querySelector('#name')
-            const email = vistaFormulario.querySelector('#email')
-            const paqueteSelecionado = vistaFormulario.querySelector('#paquete_selecionado').value
-
-            name.parentNode.classList.remove('error')
-            inputTlf.parentNode.classList.remove('error')
-            email.parentNode.classList.remove('error')
-
-            if(name.value == ''){
-                name.parentNode.classList.add('error')
-                return
-            }
-
-            if(email.value =='' && inputTlf.value ==''){
-                vistaFormulario.querySelector('.formulario').classList.add('error')
-                return
-            }else{
-                if(!iti.isValidNumber() && inputTlf.value !=''){
-                    inputTlf.parentNode.parentNode.classList.add('error')
-                    return
-                }
-    
-                const regexEmail = /[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+/
-                if(!regexEmail.test(email.value) && email.value !=''){
-                    email.parentNode.classList.add('error')
-                    return
-                }
-            }
-
-
-
-            // ENVIAR DATA A API
-            const data = {
-                paquete: paqueteSelecionado,
-                nombre: name.value.trim(),
-                telefono: inputTlf.value.trim(),
-                correo: email.value.trim()
-            }
-
-            console.log(data)
-
-            document.querySelector('.messaje_pos_send').classList.add('active')
-
-            setTimeout(()=>{
-                buttonCerrarFormulario.click()
-                document.querySelector('.messaje_pos_send').classList.remove('active')
-                inputTlf.value =''
-                name.value =''
-                email.value =''
-            }, 5000)
-        })
-
-
-        // INDICADOR
-
-        function setIndicador(entries, observer) {
-            if (entries[0].isIntersecting && entries.length == 1) {
-                const index = parseInt(entries[0].target.dataset.indicador)
-                indicador.querySelectorAll('span').forEach((span, i) => {
-                    if (i < index) {
-                        span.style.transform = 'translateY(-200%)'
-                    } else if (i > index) {
-                        span.style.transform = 'translateY(0%)'
-                    } else {
-                        span.style.transform = 'translateY(-100%)'
-                    }
                 })
-            } else {
-                if (entries[0].target.dataset.indicador == '0' && entries[0].boundingClientRect.top > 0) {
-                    indicador.querySelectorAll('span')[0].style.transform = 'translateY(0%)'
+            })
+
+            paquetes.forEach(paquete => {
+                const detalles = paquete.querySelector('.detalles')
+                const detallesHeight = detalles.offsetHeight
+                detalles.style.height = `${detallesHeight}px`
+                detalles.classList.add('hidden')
+
+                paquete.addEventListener('click', () => {
+                    detalles.classList.toggle('hidden')
+                })
+            })
+
+            buttonsPaquetes.forEach(buttonPaquete => {
+                buttonPaquete.addEventListener('click', () => {
+                    vistaFormulario.querySelector('#paquete_selecionado').value = buttonPaquete.parentNode.parentNode.querySelector('.title').textContent
+                    vistaFormulario.classList.add('active')
+                })
+            })
+            buttonCerrarFormulario.addEventListener('click', () => {
+                vistaFormulario.classList.remove('active')
+            })
+
+            buttonSubmitFormulario.addEventListener('click', (e) => {
+                e.preventDefault()
+                const name = vistaFormulario.querySelector('#name')
+                const email = vistaFormulario.querySelector('#email')
+                const paqueteSelecionado = vistaFormulario.querySelector('#paquete_selecionado').value
+
+                name.parentNode.classList.remove('error')
+                inputTlf.parentNode.classList.remove('error')
+                email.parentNode.classList.remove('error')
+
+                if (name.value == '') {
+                    name.parentNode.classList.add('error')
+                    return
+                }
+
+                if (email.value == '' && inputTlf.value == '') {
+                    vistaFormulario.querySelector('.formulario').classList.add('error')
+                    return
+                } else {
+                    if (!iti.isValidNumber() && inputTlf.value != '') {
+                        inputTlf.parentNode.parentNode.classList.add('error')
+                        return
+                    }
+
+                    const regexEmail = /[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+/
+                    if (!regexEmail.test(email.value) && email.value != '') {
+                        email.parentNode.classList.add('error')
+                        return
+                    }
+                }
+
+
+
+                // ENVIAR DATA A API
+                const data = {
+                    paquete: paqueteSelecionado,
+                    nombre: name.value.trim(),
+                    telefono: inputTlf.value.trim(),
+                    correo: email.value.trim()
+                }
+
+                console.log(data)
+
+                document.querySelector('.messaje_pos_send').classList.add('active')
+
+                setTimeout(() => {
+                    buttonCerrarFormulario.click()
+                    document.querySelector('.messaje_pos_send').classList.remove('active')
+                    inputTlf.value = ''
+                    name.value = ''
+                    email.value = ''
+                }, 5000)
+            })
+
+
+            // INDICADOR
+
+            function setIndicador(entries, observer) {
+                if (entries[0].isIntersecting && entries.length == 1) {
+                    const index = parseInt(entries[0].target.dataset.indicador)
+                    indicador.querySelectorAll('span').forEach((span, i) => {
+                        if (i < index) {
+                            span.style.transform = 'translateY(-200%)'
+                        } else if (i > index) {
+                            span.style.transform = 'translateY(0%)'
+                        } else {
+                            span.style.transform = 'translateY(-100%)'
+                        }
+                    })
+                } else {
+                    if (entries[0].target.dataset.indicador == '0' && entries[0].boundingClientRect.top > 0) {
+                        indicador.querySelectorAll('span')[0].style.transform = 'translateY(0%)'
+                    }
                 }
             }
-        }
 
-        const observer = new IntersectionObserver(setIndicador, {
-            threshold: 0.5
-        })
+            const observer = new IntersectionObserver(setIndicador, {
+                threshold: 0.5
+            })
 
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section)
-        })
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section)
+            })
 
-        // SLIDER MIEMBROS
+            // SLIDER MIEMBROS
 
-        const miembros = document.querySelectorAll('.miembro')
-        function sliderMembers(current = 0) {
-            let index = current == miembros.length ? 0 : current
-            if (index > 0) {
-                miembros[index - 1].style.animation = 'toLeft 1s ease-out forwards'
-            } else {
-                miembros[miembros.length - 1].style.animation = 'toLeft 1s ease-out forwards'
-            }
-            miembros[index].style.animation = 'toCenter 1s ease-out forwards'
-
-            setTimeout(() => {
-                sliderMembers(index + 1)
-            }, 8000)
-        }
-        sliderMembers()
-
-
-        // LIBRERIA TELEFONO
-        const resetInputTlf = () => {
-            inputTlf.parentNode.parentNode.classList.remove('error')
-        }
-
-        inputTlf.addEventListener('blur', ()=> {
-            resetInputTlf()
-            if (inputTlf.value.trim()) {
-                if (!iti.isValidNumber()) {
-                    inputTlf.parentNode.parentNode.classList.add('error')
+            const miembros = document.querySelectorAll('.miembro')
+            const timelineMiembros = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".team",
+                    pin: true,
+                    start: `top ${headerHeight}px`,
+                    end: `+=${miembros[0].parentNode.offsetHeight * miembros.length}`,
+                    scrub: 0
                 }
-            }
-        });
+            });
 
-        inputTlf.addEventListener('change', resetInputTlf);
-        inputTlf.addEventListener('keyup', resetInputTlf);
+            for (let i = 0; i < miembros.length - 1; i++) {
+                timelineMiembros.to(miembros[i], 1, {
+                    xPercent: -100,
+                    delay: 1
+                }, "-=0")
+                timelineMiembros.from(miembros[i + 1], 1, {
+                    xPercent: 100
+                }, "-=1")
+            }
+
+            // PORTADASPortafolioCards
+            portadasPortafolioCards.forEach(portada => {
+                gsap.timeline({
+                    scrollTrigger: {
+                        trigger: portada,
+                        pin: false,
+                        start: "center center",
+                        scrub: 0
+                    }
+                }).to(portada.querySelector('img'), 1, {
+                    yPercent: -50
+                }, "+=0")
+            })
+
+
+
+
+            // LIBRERIA TELEFONO
+            const resetInputTlf = () => {
+                inputTlf.parentNode.parentNode.classList.remove('error')
+            }
+
+            inputTlf.addEventListener('blur', () => {
+                resetInputTlf()
+                if (inputTlf.value.trim()) {
+                    if (!iti.isValidNumber()) {
+                        inputTlf.parentNode.parentNode.classList.add('error')
+                    }
+                }
+            });
+
+            inputTlf.addEventListener('change', resetInputTlf);
+            inputTlf.addEventListener('keyup', resetInputTlf);
+        })
     </script>
 </body>
 
