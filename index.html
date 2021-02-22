@@ -534,19 +534,22 @@
                     trigger: ".team",
                     pin: true,
                     start: `top ${headerHeight}px`,
-                    end: `+=${miembros[0].parentNode.offsetHeight * miembros.length}`,
-                    scrub: 0
+                    scrub: 0,
+                    snap: {
+                        snapTo: 0.33,
+                        duration: 0.1
+                    }
                 }
             });
 
             for (let i = 0; i < miembros.length - 1; i++) {
-                timelineMiembros.to(miembros[i], 1, {
+                timelineMiembros.to(miembros[i], 0.25, {
                     xPercent: -100,
                     delay: 0.25
                 }, "-=0")
-                timelineMiembros.from(miembros[i + 1], 1, {
+                timelineMiembros.from(miembros[i + 1], 0.25, {
                     xPercent: 100
-                }, "-=1")
+                }, "-=0.25")
             }
 
             // PORTADASPortafolioCards
