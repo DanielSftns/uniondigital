@@ -4,76 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* LOADER */
+        .loader{
+            background-color: rgb(8, 8, 8);
+            width: 100%;
+            min-height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: none;
+            background-image: url('./img/loader.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 6rem;
+        }
+        .loader svg{
+            width: 30%;
+            max-width: 300px;
+        }
+
+        .loader.active{
+            display: block;
+        }
+    </style>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/intlTelInput.min.css">
+    <link rel="stylesheet" href="./css/glide.core.min.css">
     <title>UnionDigital</title>
 </head>
 
 <body>
-    <style>
-        .iti__flag {
-            background-image: url("./img/flags.png");
-        }
-        
-        @media (-webkit-min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi) {
-            .iti__flag {
-                background-image: url("./img/flags@2x.png");
-            }
-        }
-    </style>
-
-    <div class="loader active">
-        <div class="icon loading">
-            <div class="ud">
-                <svg id="UDGROUP" data-name="UD GROUP" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.8 50.35">
-                <defs>
-                    <style>
-                        .loader.active .icon .cls-1{
-                            fill: #f75c03;
-                            stroke-width: 0;
-                            stroke-dashoffset: 0;
-                            animation: none;
-                        }
-
-                        .loader.active .icon.loading .cls-1{
-                            fill: transparent;
-                            stroke: #f75c03;
-                            stroke-width: .35px;
-                            stroke-dasharray: 700;
-                            stroke-dashoffset: 0;
-                            animation: loading 5s cubic-bezier(.61,.33,.14,.72) infinite;
-                            animation-direction: alternate;
-                        }
-
-                        @keyframes loading {
-                            0%{
-                                stroke-dashoffset: 700;
-                                  fill: transparent;
-                            }
-                            80%{
-                                fill: transparent;
-                                stroke-width: .35px;
-                            }
-                            100%{
-                                stroke-dashoffset: 0;
-                                  fill: #f75c03;
-                                  stroke-width: 0;
-                            }
-                        }
-                    </style>
-                </defs>
-                <g id="UD">
-                    <path class="cls-1" d="M83.81,31.45a24.77,24.77,0,0,0-9-5,38.52,38.52,0,0,0-11.62-1.62H43.66a3.76,3.76,0,0,0-4,3.94V51.68a5.44,5.44,0,0,1-1.35,4,5.18,5.18,0,0,1-3.88,1.36c-2.52,0-3.49-1-3.81-1.34a5.59,5.59,0,0,1-1.31-4V28.77a3.79,3.79,0,0,0-4.14-3.94H12.7a4.31,4.31,0,0,0-2.92,1A3.8,3.8,0,0,0,8.6,28.77V51c0,7.82,2.26,13.87,6.71,18a21.68,21.68,0,0,0,8.24,4.65,36.11,36.11,0,0,0,10.89,1.5h1.48a29.66,29.66,0,0,0,8.42-1.64A27.52,27.52,0,0,0,53,68.71,24.7,24.7,0,0,0,58.41,62l.15-.35h0l0,0v0h4.51a11.34,11.34,0,0,0,8.4-3.24A11.53,11.53,0,0,0,74.73,50a11.53,11.53,0,0,0-3.2-8.42,11.34,11.34,0,0,0-8.4-3.24h-6.8V51c0,6.73-1.76,11.66-5.4,15s-9.17,5.1-16.48,5.1S21.68,69.46,18,66.08,12.6,57.77,12.6,51V28.83H25.31V51.68a9.46,9.46,0,0,0,2.43,6.82,8.88,8.88,0,0,0,6.69,2.56,9.06,9.06,0,0,0,6.73-2.54,9.34,9.34,0,0,0,2.5-6.84V28.83H63.19c7.71,0,13.76,1.89,18,5.62S87.4,43.26,87.4,50s-2,11.83-6.24,15.55-10.26,5.62-18,5.62H55.1a15.4,15.4,0,0,1-1.66,1.92,16.67,16.67,0,0,1-2.6,2.08H63.19a38.52,38.52,0,0,0,11.62-1.62,24.77,24.77,0,0,0,9-5c5-4.46,7.59-10.7,7.59-18.55S88.85,35.91,83.81,31.45ZM60.7,42.34h2.43a7.42,7.42,0,0,1,5.56,2,7.59,7.59,0,0,1,2,5.61,7.59,7.59,0,0,1-2,5.61,7.42,7.42,0,0,1-5.56,2H60.7Z" transform="translate(-8.6 -24.83)"/>
-                </g>
-            </svg>
-            </div>
-            <div class="letras">
-                <img src="./img/UnionDigitalLetras.svg">
-            </div>
-        </div>
-    </div>
+    <div class="loader active"></div>
 
     <div class="vista_formulario">
         <form class="formulario" action="">
@@ -112,7 +76,7 @@
 
     <header>
         <nav>
-            <img src="./img/logo.svg" alt="UnionDigital">
+            <img class="logo" src="./img/logo.svg" alt="UnionDigital">
 
             <button class="menu-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="53.512" height="35.675" viewBox="0 0 53.512 35.675">
@@ -170,15 +134,17 @@
             </li>
         </ul>
 
-        <div class="hero" data-indicador="0">
-            <p class="copy">Somos un equipo destinado a usar la tecnología para prestar un servicio de calidad en el area digital.</p>
-            <img src="./img/team.svg" alt="team UnionDigital">
+        <div class="hero">
+            <div>
+                <p class="copy">Somos un equipo destinado a usar la tecnología para prestar un servicio de calidad en el area digital.</p>
+                <img src="./img/team.svg" alt="team UnionDigital">
+            </div>
         </div>
 
         <section class="servicios" id="servicios" data-indicador="0">
 
             <div class="card paquete">
-                <img src="./img/2.png" alt="logo" class="portada">
+                <img src="./img/lazy.PNG" data-src="./img/servicios/logo_david.png" alt="logo" class="portada">
                 <div class="info">
                     <h2 class="title">Logo <span class="price">$30</span></h2>
                     <p class="sub-title">En el formato que necesites</p>
@@ -190,7 +156,7 @@
             </div>
 
             <div class="card paquete">
-                <img src="./img/1.png" alt="logo + guia de marca" class="portada">
+                <img src="./img/lazy.PNG" data-src="./img/servicios/logo_guia.png" alt="logo + guia de marca" class="portada">
                 <div class="info">
                     <h2 class="title">Logo + guia de marca <span class="price">$50</span></h2>
                     <p class="sub-title">pequeña guia que se amolda a tus necesidades</p>
@@ -202,7 +168,7 @@
             </div>
 
             <div class="card paquete">
-                <img src="./img/1.png" alt="logo + guia de marca" class="portada">
+                <img src="./img/lazy.PNG" data-src="./img/servicios/logo_guia.png" alt="logo + guia de marca" class="portada">
                 <div class="info">
                     <h2 class="title">Logo + guia de marca <span class="price">$50</span></h2>
                     <p class="sub-title">pequeña guia que se amolda a tus necesidades</p>
@@ -219,7 +185,7 @@
 
             <div class="card">
                 <div class="portada">
-                    <img src="./img/2.png" alt="David Marabay">
+                    <img src="./img/lazy.PNG" data-src="./img/portafolio/logo_david.png" alt="David Marabay">
                 </div>
                 <div class="info">
                     <h2 class="title">David Marabay</h2>
@@ -229,7 +195,7 @@
 
             <div class="card">
                 <div class="portada animation">
-                    <img src="./img/farias_fundacion.png" alt="farias fundación">
+                    <img src="./img/lazy.PNG" data-src="./img/portafolio/farias_fundacion.png" alt="farias fundación">
                 </div>
                 <div class="info">
                     <h2 class="title">Farias Fundación</h2>
@@ -239,7 +205,7 @@
 
             <div class="card">
                 <div class="portada animation">
-                    <img src="./img/soymilaortiz.png" alt="SoyMilaOrtyz">
+                    <img src="./img/lazy.PNG" data-src="./img/portafolio/soymilaortiz.png" alt="SoyMilaOrtyz">
                 </div>
                 <div class="info">
                     <h2 class="title">SoyMilaOrtyz</h2>
@@ -249,7 +215,7 @@
 
             <div class="card">
                 <div class="portada animation">
-                    <img src="./img/infobreakingbad.png" alt="infoBreakingBad">
+                    <img src="./img/lazy.PNG" data-src="./img/portafolio/infobreakingbad.png" alt="infoBreakingBad">
                 </div>
                 <div class="info">
                     <h2 class="title">info Breaking Bad</h2>
@@ -262,85 +228,107 @@
         <section class="nosotros" id="nosotros" data-indicador="2">
             <div>
                 <p>Emprendimiento que formamos mediados del año 2019, 4 jóvenes Venezolanos estudiantes de ingeniería de sistemas en la Universidad de oriente.</p>
-                <img src="./img/top-view-photo-of-people-having-a-meeting-3183165.png" alt="nosotros">
+                <img src="./img/lazy.PNG" data-src="./img/nosotros.png" alt="nosotros">
                 <p>Prestamos servicios en el ámbito digital, así mismo creamos proyectos tecnológicos</p>
             </div>
         </section>
 
         <section class="team" id="team" data-indicador="3">
-            <div class="miembro">
-                <div class="header">
-                    <img class="avatar" src="./img/Ricardo.svg" alt="Ricardo Bellorin">
-                    <div class="info">
-                        <h2 class="name">Ricardo Bellorin</h2>
-                        <h3 class="skills">Diseñador Grafico</h3>
+            <div class="glide">
+                <div data-glide-el="track" class="glide__track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                            
+                            <div class="miembro">
+                                <div class="header">
+                                    <img class="avatar" src="./img/Ricardo.svg" alt="Ricardo Bellorin">
+                                    <div class="info">
+                                        <h2 class="name">Ricardo Bellorin</h2>
+                                        <h3 class="skills">Diseñador Grafico</h3>
+                
+                                        <div class="contact">
+                                            <a target="_blank" class="icon icon-behance" href="#"></a>
+                                            <a target="_blank" class="icon icon-instagram" href="#"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="quote">Cuando trabajas lo que te gusta, ¿Qué podría salir mal? Comunicativo, responsable y atento... Se ve bien, pero... ¿Funciona?</p>
+                            </div>
 
-                        <div class="contact">
-                            <a target="_blank" class="icon icon-behance" href="#"></a>
-                            <a target="_blank" class="icon icon-instagram" href="#"></a>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="glide__slide">
+                            
+                            <div class="miembro">
+                                <div class="header">
+                                    <img class="avatar" src="./img/Daniel.svg" alt="Daniel Sifontes">
+                                    <div class="info">
+                                        <h2 class="name">Daniel Sifontes</h2>
+                                        <h3 class="skills">Frontend Developer</h3>
+                
+                                        <div class="contact">
+                                            <a target="_blank" class="icon icon-fiverr" href="#"></a>
+                                            <a target="_blank" class="icon icon-github" href="#"></a>
+                                            <a target="_blank" class="icon icon-instagram" href="#"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="quote">Hagamos tu idea de negocio realidad! Personalmente comprometido con lo que hago y me apasiona :)</p>
+                            </div>
+
+                        </li>
+                        <li class="glide__slide">
+                            
+                            <div class="miembro">
+                                <div class="header">
+                                    <img class="avatar" src="./img/Jesus.svg" alt="Jesus Robles">
+                                    <div class="info">
+                                        <h2 class="name">Jesus Robles</h2>
+                                        <h3 class="skills">Diseñador Grafico</h3>
+                
+                                        <div class="contact">
+                                            <a target="_blank" class="icon icon-behance" href="#"></a>
+                                            <a target="_blank" class="icon icon-instagram" href="#"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="quote">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio explicabo omnis non! Aspernatur animi id dolores qui</p>
+                            </div>
+
+                        </li>
+                        <li class="glide__slide">
+                            
+                            <div class="miembro">
+                                <div class="header">
+                                    <img class="avatar" src="./img/David.svg" alt="David Marabay">
+                                    <div class="info">
+                                        <h2 class="name">David Marabay</h2>
+                                        <h3 class="skills">Backend Developer</h3>
+                
+                                        <div class="contact">
+                                            <a target="_blank" class="icon icon-github" href="#"></a>
+                                            <a target="_blank" class="icon icon-instagram" href="#"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="quote">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio explicabo omnis non! Aspernatur animi id dolores qui</p>
+                            </div>
+
+                        </li>
+                    </ul>
                 </div>
-                <p class="quote">Cuando trabajas lo que te gusta, ¿Qué podría salir mal? Comunicativo, responsable y atento... Se ve bien, pero... ¿Funciona?</p>
             </div>
-
-            <div class="miembro">
-                <div class="header">
-                    <img class="avatar" src="./img/Daniel.svg" alt="Daniel Sifontes">
-                    <div class="info">
-                        <h2 class="name">Daniel Sifontes</h2>
-                        <h3 class="skills">Frontend Developer</h3>
-
-                        <div class="contact">
-                            <a target="_blank" class="icon icon-fiverr" href="#"></a>
-                            <a target="_blank" class="icon icon-github" href="#"></a>
-                            <a target="_blank" class="icon icon-instagram" href="#"></a>
-                        </div>
-                    </div>
-                </div>
-                <p class="quote">Hagamos tu idea de negocio realidad! Personalmente comprometido con lo que hago y me apasiona :)</p>
-            </div>
-
-            <div class="miembro">
-                <div class="header">
-                    <img class="avatar" src="./img/Jesus.svg" alt="Jesus Robles">
-                    <div class="info">
-                        <h2 class="name">Jesus Robles</h2>
-                        <h3 class="skills">Diseñador Grafico</h3>
-
-                        <div class="contact">
-                            <a target="_blank" class="icon icon-behance" href="#"></a>
-                            <a target="_blank" class="icon icon-instagram" href="#"></a>
-                        </div>
-                    </div>
-                </div>
-                <p class="quote">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio explicabo omnis non! Aspernatur animi id dolores qui</p>
-            </div>
-
-            <div class="miembro">
-                <div class="header">
-                    <img class="avatar" src="./img/David.svg" alt="David Marabay">
-                    <div class="info">
-                        <h2 class="name">David Marabay</h2>
-                        <h3 class="skills">Backend Developer</h3>
-
-                        <div class="contact">
-                            <a target="_blank" class="icon icon-github" href="#"></a>
-                            <a target="_blank" class="icon icon-instagram" href="#"></a>
-                        </div>
-                    </div>
-                </div>
-                <p class="quote">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio explicabo omnis non! Aspernatur animi id dolores qui</p>
-            </div>
+            
         </section>
 
         <button class="chat-icon"></button>
     </main>
 
+    <script src="./js/lazyLoading.js"></script>
     <script src="./js/intlTelInput.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+    <script src="./js/glide.min.js"></script>
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
+    <script src="./js/ScrollToPlugin.min.js"></script>
 
     <script>
         const menuIcon = document.querySelector('.menu-icon')
@@ -353,37 +341,21 @@
         const buttonSubmitFormulario = vistaFormulario.querySelector('.call-to-action')
         const portadasPortafolioCards = document.querySelectorAll('.portada.animation')
 
-        setTimeout(()=>{
-			if(document.readyState == 'complete'){
-				finalizarLoading();
-			}else{
-				const interval = setInterval(()=>{
-					if(document.readyState == 'complete'){
-						finalizarLoading();
-						clearInterval(interval);
-					}
-				},10000);
-			}
-		},5000);
-
-		function finalizarLoading(){
-			document.querySelector('.icon').classList.remove('loading');
-			setTimeout(()=>{
-				document.querySelector('.loader').classList.remove('active');
-			},4000)
-		}
-        
         window.addEventListener('load', () => {
+            
             // SETEAR ESTYLOS Y CONFIGUARION
             const headerHeight = document.querySelector('header').offsetHeight
             document.querySelector('.hero').style.height = `calc(100vh - ${headerHeight}px)`
             document.querySelector('.team').style.height = `calc(100vh - ${headerHeight}px)`
             document.querySelector('.menu').style.top = `${headerHeight}px`
-
+            document.querySelector('.hero div').style.transform = `translateY(-${headerHeight / 2}px)`
+            
             portadasPortafolioCards.forEach(portada => {
-                portada.style.height = portada.offsetHeight / 2 + 'px'
+                portada.style.height = Math.round(portada.offsetWidth * 0.5625) + 'px'
             })
 
+            document.querySelector('.loader').classList.remove('active');
+            
             const inputTlf = document.querySelector("#phone")
             const iti = window.intlTelInput(inputTlf, {
                 preferredCountries: ["ve", "us"],
@@ -401,6 +373,14 @@
                 },
                 utilsScript: './js/utils.js'
             });
+
+            new Glide('#team .glide',{
+                type: "carousel",
+                gap: 0,
+                autoplay: 5000,
+                perTouch: 1,
+                animationDuration: 1000
+            }).mount()
 
             // EVENTOS CLICK
             menuIcon.addEventListener('click', () => {
@@ -473,8 +453,6 @@
                     }
                 }
 
-
-
                 // ENVIAR DATA A API
                 const data = {
                     paquete: paqueteSelecionado,
@@ -526,31 +504,6 @@
                 observer.observe(section)
             })
 
-            // SLIDER MIEMBROS
-
-            const miembros = document.querySelectorAll('.miembro')
-            const timelineMiembros = gsap.timeline({
-                scrollTrigger: {
-                    trigger: ".team",
-                    pin: true,
-                    start: `top ${headerHeight}px`,
-                    scrub: 0,
-                    snap: {
-                        snapTo: 0.33,
-                        duration: 0.1
-                    }
-                }
-            });
-
-            for (let i = 0; i < miembros.length - 1; i++) {
-                timelineMiembros.to(miembros[i], 0.25, {
-                    xPercent: -100,
-                    delay: 0.25
-                }, "-=0")
-                timelineMiembros.from(miembros[i + 1], 0.25, {
-                    xPercent: 100
-                }, "-=0.25")
-            }
 
             // PORTADASPortafolioCards
             portadasPortafolioCards.forEach(portada => {
@@ -565,8 +518,6 @@
                     yPercent: -50
                 }, "+=0")
             })
-
-
 
 
             // LIBRERIA TELEFONO
