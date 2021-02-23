@@ -111,6 +111,7 @@
             </button>
         </nav>
         <h5 class="indicador active">
+            <span></span>
             <span>Servicios | Branding</span>
             <span>Portafolio</span>
             <span>Nosotros</span>
@@ -134,14 +135,14 @@
             </li>
         </ul>
 
-        <div class="hero">
+        <section class="hero" data-indicador="0">
             <div>
                 <p class="copy">Somos un equipo destinado a usar la tecnología para prestar un servicio de calidad en el area digital.</p>
                 <img src="./img/team.svg" alt="team UnionDigital">
             </div>
-        </div>
+        </section>
 
-        <section class="servicios" id="servicios" data-indicador="0">
+        <section class="servicios" id="servicios" data-indicador="1">
 
             <div class="card paquete">
                 <img src="./img/lazy.PNG" data-src="./img/servicios/logo_david.png" alt="logo" class="portada">
@@ -181,7 +182,7 @@
 
         </section>
 
-        <section class="portafolio" id="portafolio" data-indicador="1">
+        <section class="portafolio" id="portafolio" data-indicador="2">
 
             <div class="card">
                 <div class="portada">
@@ -225,7 +226,7 @@
 
         </section>
 
-        <section class="nosotros" id="nosotros" data-indicador="2">
+        <section class="nosotros" id="nosotros" data-indicador="3">
             <div>
                 <p>Emprendimiento que formamos mediados del año 2019, 4 jóvenes Venezolanos estudiantes de ingeniería de sistemas en la Universidad de oriente.</p>
                 <img src="./img/lazy.PNG" data-src="./img/nosotros.png" alt="nosotros">
@@ -233,7 +234,7 @@
             </div>
         </section>
 
-        <section class="team" id="team" data-indicador="3">
+        <section class="team" id="team" data-indicador="4">
             <div class="glide">
                 <div data-glide-el="track" class="glide__track">
                     <ul class="glide__slides">
@@ -291,7 +292,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p class="quote">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio explicabo omnis non! Aspernatur animi id dolores qui</p>
+                                <p class="quote">¡Hagamos tus ideas en diseños!</p>
                             </div>
 
                         </li>
@@ -477,32 +478,29 @@
 
             // INDICADOR
 
-            function setIndicador(entries, observer) {
-                if (entries[0].isIntersecting && entries.length == 1) {
-                    const index = parseInt(entries[0].target.dataset.indicador)
-                    indicador.querySelectorAll('span').forEach((span, i) => {
-                        if (i < index) {
-                            span.style.transform = 'translateY(-200%)'
-                        } else if (i > index) {
-                            span.style.transform = 'translateY(0%)'
-                        } else {
-                            span.style.transform = 'translateY(-100%)'
-                        }
-                    })
-                } else {
-                    if (entries[0].target.dataset.indicador == '0' && entries[0].boundingClientRect.top > 0) {
-                        indicador.querySelectorAll('span')[0].style.transform = 'translateY(0%)'
+            window.addEventListener('scroll', ()=> {
+                document.querySelectorAll('section').forEach(section => {
+                    if(section.getClientRects()[0].top < headerHeight + 10 && section.getClientRects()[0].top > headerHeight - 10){
+                        const index = parseInt(section.dataset.indicador)
+                        setIndicador(index)
+                    }else if(section.getClientRects()[0].bottom < innerHeight / 2 + 10 && section.getClientRects()[0].bottom > innerHeight / 2 - 10){
+                        const index = parseInt(section.dataset.indicador)
+                        setIndicador(index)
                     }
-                }
+                })
+            })
+
+            function setIndicador(index){
+                indicador.querySelectorAll('span').forEach((span, i) => {
+                    if (i < index) {
+                        span.style.transform = 'translateY(-200%)'
+                    } else if (i > index) {
+                        span.style.transform = 'translateY(0%)'
+                    } else {
+                        span.style.transform = 'translateY(-100%)'
+                    }
+                })
             }
-
-            const observer = new IntersectionObserver(setIndicador, {
-                threshold: 0.5
-            })
-
-            document.querySelectorAll('section').forEach(section => {
-                observer.observe(section)
-            })
 
 
             // PORTADASPortafolioCards
