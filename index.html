@@ -73,6 +73,18 @@
             </div>
         </form>
     </div>
+    
+    <div class="vista_modal_card">
+        <div class="modal_card">
+            <button type="button" class="close"></button>
+            <h3 class="title">Logo $30</h3>
+            <div class="container">
+                <img src="./img/servicios/logo_david.png">
+                <p class="description">Logotipo estilo minimalista con variantes, entregaremos el logo en el formato que requieras. Al seleccionar este paquete nos pondremos en contacto contigo.</p>
+            </div>
+            <button class="call-to-action">Seleccionar</button>
+        </div>
+    </div>
 
     <header>
         <nav>
@@ -109,6 +121,20 @@
                     <rect class="bar bar3" x="0" y="29.5" rx="3" width="53.512" height="6"></rect>
                 </svg>
             </button>
+            <ul class="menu">
+                <li>
+                    <button class="link" data-href="#servicios">Servicios</button>
+                </li>
+                <li>
+                    <button class="link" data-href="#portafolio">Portafolio</button>
+                </li>
+                <li>
+                    <button class="link" data-href="#nosotros">Nosotros</button>
+                </li>
+                <li>
+                    <button class="link" data-href="#team">Equipo</button>
+                </li>
+            </ul>
         </nav>
         <h5 class="indicador active">
             <span></span>
@@ -120,20 +146,6 @@
     </header>
 
     <main class="container">
-        <ul class="menu">
-            <li>
-                <button class="link" data-href="#servicios">Servicios</button>
-            </li>
-            <li>
-                <button class="link" data-href="#portafolio">Portafolio</button>
-            </li>
-            <li>
-                <button class="link" data-href="#nosotros">Nosotros</button>
-            </li>
-            <li>
-                <button class="link" data-href="#team">Equipo</button>
-            </li>
-        </ul>
 
         <section class="hero" data-indicador="0">
             <div>
@@ -143,6 +155,14 @@
         </section>
 
         <section class="servicios" id="servicios" data-indicador="1">
+            <div class="controls">
+                <div class="indicador">Servicios | Branding</div>
+
+                <div class="arrows">
+                    <button class="arrow left disable"></button>
+                    <button class="arrow right"></button>
+                </div>
+            </div>
 
             <div class="card paquete">
                 <img src="./img/lazy.PNG" data-src="./img/servicios/logo_david.png" alt="logo" class="portada">
@@ -168,21 +188,17 @@
                 </div>
             </div>
 
-            <div class="card paquete">
-                <img src="./img/lazy.PNG" data-src="./img/servicios/logo_guia.png" alt="logo + guia de marca" class="portada">
-                <div class="info">
-                    <h2 class="title">Logo + guia de marca <span class="price">$50</span></h2>
-                    <p class="sub-title">pequeña guia que se amolda a tus necesidades</p>
-                    <div class="detalles">
-                        <p>Al seleccionar este paquete nos pondremos en contacto contigo.</p>
-                        <button class="call-to-action">Seleccionar</button>
-                    </div>
-                </div>
-            </div>
-
         </section>
 
         <section class="portafolio" id="portafolio" data-indicador="2">
+            <div class="controls">
+                <div class="indicador">Portafolio</div>
+
+                <div class="arrows">
+                    <button class="arrow left disable"></button>
+                    <button class="arrow right"></button>
+                </div>
+            </div>
 
             <div class="card">
                 <div class="portada">
@@ -227,30 +243,42 @@
         </section>
 
         <section class="nosotros" id="nosotros" data-indicador="3">
-            <div>
+            <div class="controls">
+                <div class="indicador">Nosotros</div>
+            </div>
+
+            <div class="content">
                 <p>Emprendimiento que formamos mediados del año 2019, 4 jóvenes Venezolanos estudiantes de ingeniería de sistemas en la Universidad de oriente.</p>
                 <img src="./img/lazy.PNG" data-src="./img/nosotros.png" alt="nosotros">
-                <p>Prestamos servicios en el ámbito digital, así mismo creamos proyectos tecnológicos</p>
+                <p class="for_mobile">Prestamos servicios en el ámbito digital, así mismo creamos proyectos tecnológicos</p>
+                <p class="for_dektop">Decidimos trabajar en equipo y nos proyectamos a prestar servicios en el ámbito digital,  así mismo tendremos proyectos  que nos puedan posicionar de manera escalonada.</p>
+                <button class="play"></button>
             </div>
         </section>
 
         <section class="team" id="team" data-indicador="4">
+            <div class="controls">
+                <div class="indicador">Nosotros | Equipo</div>
+
+                <div class="arrows">
+                    <button class="arrow left carousel"></button>
+                    <button class="arrow right carousel"></button>
+                </div>
+            </div>
             <div class="glide">
                 <div data-glide-el="track" class="glide__track">
                     <ul class="glide__slides">
                         <li class="glide__slide">
                             
                             <div class="miembro">
-                                <div class="header">
-                                    <img class="avatar" src="./img/Ricardo.svg" alt="Ricardo Bellorin">
-                                    <div class="info">
-                                        <h2 class="name">Ricardo Bellorin</h2>
-                                        <h3 class="skills">Diseñador Grafico</h3>
-                
-                                        <div class="contact">
-                                            <a target="_blank" class="icon icon-behance" href="#"></a>
-                                            <a target="_blank" class="icon icon-instagram" href="#"></a>
-                                        </div>
+                                <img class="avatar" src="./img/Ricardo.svg" alt="Ricardo Bellorin">
+                                <div class="info">
+                                    <h2 class="name">Ricardo Bellorin</h2>
+                                    <h3 class="skills">Diseñador Grafico</h3>
+            
+                                    <div class="contact">
+                                        <a target="_blank" class="icon icon-behance" href="#"></a>
+                                        <a target="_blank" class="icon icon-instagram" href="https://www.instagram.com/ricardoabg_/"></a>
                                     </div>
                                 </div>
                                 <p class="quote">Cuando trabajas lo que te gusta, ¿Qué podría salir mal? Comunicativo, responsable y atento... Se ve bien, pero... ¿Funciona?</p>
@@ -260,17 +288,15 @@
                         <li class="glide__slide">
                             
                             <div class="miembro">
-                                <div class="header">
-                                    <img class="avatar" src="./img/Daniel.svg" alt="Daniel Sifontes">
-                                    <div class="info">
-                                        <h2 class="name">Daniel Sifontes</h2>
-                                        <h3 class="skills">Frontend Developer</h3>
-                
-                                        <div class="contact">
-                                            <a target="_blank" class="icon icon-fiverr" href="#"></a>
-                                            <a target="_blank" class="icon icon-github" href="#"></a>
-                                            <a target="_blank" class="icon icon-instagram" href="#"></a>
-                                        </div>
+                                <img class="avatar" src="./img/Daniel.svg" alt="Daniel Sifontes">
+                                <div class="info">
+                                    <h2 class="name">Daniel Sifontes</h2>
+                                    <h3 class="skills">Frontend Developer</h3>
+            
+                                    <div class="contact">
+                                        <a target="_blank" class="icon icon-fiverr" href="https://www.fiverr.com/danielsifont703"></a>
+                                        <a target="_blank" class="icon icon-github" href="https://github.com/DanielSftns/"></a>
+                                        <a target="_blank" class="icon icon-instagram" href="https://www.instagram.com/daniel_sfts/"></a>
                                     </div>
                                 </div>
                                 <p class="quote">Hagamos tu idea de negocio realidad! Personalmente comprometido con lo que hago y me apasiona :)</p>
@@ -280,16 +306,14 @@
                         <li class="glide__slide">
                             
                             <div class="miembro">
-                                <div class="header">
-                                    <img class="avatar" src="./img/Jesus.svg" alt="Jesus Robles">
-                                    <div class="info">
-                                        <h2 class="name">Jesus Robles</h2>
-                                        <h3 class="skills">Diseñador Grafico</h3>
-                
-                                        <div class="contact">
-                                            <a target="_blank" class="icon icon-behance" href="#"></a>
-                                            <a target="_blank" class="icon icon-instagram" href="#"></a>
-                                        </div>
+                                <img class="avatar" src="./img/Jesus.svg" alt="Jesus Robles">
+                                <div class="info">
+                                    <h2 class="name">Jesus Robles</h2>
+                                    <h3 class="skills">Diseñador Grafico</h3>
+            
+                                    <div class="contact">
+                                        <a target="_blank" class="icon icon-behance" href="#"></a>
+                                        <a target="_blank" class="icon icon-instagram" href="https://www.instagram.com/roblesje15/"></a>
                                     </div>
                                 </div>
                                 <p class="quote">¡Hagamos tus ideas en diseños!</p>
@@ -299,19 +323,18 @@
                         <li class="glide__slide">
                             
                             <div class="miembro">
-                                <div class="header">
-                                    <img class="avatar" src="./img/David.svg" alt="David Marabay">
-                                    <div class="info">
-                                        <h2 class="name">David Marabay</h2>
-                                        <h3 class="skills">Backend Developer</h3>
-                
-                                        <div class="contact">
-                                            <a target="_blank" class="icon icon-github" href="#"></a>
-                                            <a target="_blank" class="icon icon-instagram" href="#"></a>
-                                        </div>
+                                <img class="avatar" src="./img/David.svg" alt="David Marabay">
+                                <div class="info">
+                                    <h2 class="name">David Marabay</h2>
+                                    <h3 class="skills">Backend Developer</h3>
+            
+                                    <div class="contact">
+                                        <a target="_blank" class="icon icon-linkedin" href="https://www.linkedin.com/in/david-marabay-b91a11183/"></a>
+                                        <a target="_blank" class="icon icon-github" href="https://github.com/DavidJMS"></a>
+                                        <a target="_blank" class="icon icon-instagram" href="https://www.instagram.com/david_marabay/"></a>
                                     </div>
                                 </div>
-                                <p class="quote">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio explicabo omnis non! Aspernatur animi id dolores qui</p>
+                                <p class="quote">Me apasiona trabajar en esta área que me da la oportunidad de crear e innovar, por eso lo hago de la mejor manera</p>
                             </div>
 
                         </li>
@@ -330,212 +353,18 @@
     <script src="./js/gsap.min.js"></script>
     <script src="./js/ScrollTrigger.min.js"></script>
     <script src="./js/ScrollToPlugin.min.js"></script>
-
+    <script src="./js/index.js"></script>
     <script>
-        const menuIcon = document.querySelector('.menu-icon')
-        const menu = document.querySelector('.menu')
-        const indicador = document.querySelector('.indicador')
-        const paquetes = document.querySelectorAll('.paquete')
-        const buttonsPaquetes = document.querySelectorAll('.paquete button')
-        const vistaFormulario = document.querySelector('.vista_formulario')
-        const buttonCerrarFormulario = vistaFormulario.querySelector('.close')
-        const buttonSubmitFormulario = vistaFormulario.querySelector('.call-to-action')
-        const portadasPortafolioCards = document.querySelectorAll('.portada.animation')
-
-        window.addEventListener('load', () => {
-            
-            // SETEAR ESTYLOS Y CONFIGUARION
-            const headerHeight = document.querySelector('header').offsetHeight
-            document.querySelector('.hero').style.height = `calc(100vh - ${headerHeight}px)`
-            document.querySelector('.team').style.height = `calc(100vh - ${headerHeight}px)`
-            document.querySelector('.menu').style.top = `${headerHeight}px`
-            document.querySelector('.hero div').style.transform = `translateY(-${headerHeight / 2}px)`
-            
-            portadasPortafolioCards.forEach(portada => {
-                portada.style.height = Math.round(portada.offsetWidth * 0.5625) + 'px'
-            })
-
-            document.querySelector('.loader').classList.remove('active');
-            
-            const inputTlf = document.querySelector("#phone")
-            const iti = window.intlTelInput(inputTlf, {
-                preferredCountries: ["ve", "us"],
-                initialCountry: "VE",
-                geoIpLookup: function(success, failure) {
-                    fetch('https://ipapi.co/json/')
-                        .then(function(response) {
-                            response.json().then(jsonData => {
-                                success(jsonData.country_code)
-                            });
-                        })
-                        .catch(function(error) {
-                            console.log(error)
-                        });
-                },
-                utilsScript: './js/utils.js'
-            });
-
-            new Glide('#team .glide',{
-                type: "carousel",
-                gap: 0,
-                autoplay: 5000,
-                perTouch: 1,
-                animationDuration: 1000
-            }).mount()
-
-            // EVENTOS CLICK
-            menuIcon.addEventListener('click', () => {
-                menuIcon.classList.toggle('active')
-                menu.classList.toggle('active')
-                indicador.classList.toggle('active')
-            })
-            menu.querySelectorAll('button').forEach(link => {
-                link.addEventListener('click', (e) => {
-                    const direction = e.currentTarget.dataset.href
-                    const distance = document.querySelector(`${direction}`).getClientRects()[0].top - headerHeight
-                    menuIcon.click()
-                    gsap.to(window, {
-                        duration: 2,
-                        scrollTo: window.scrollY + distance,
-                        ease: Cubic.linear
-                    })
-                })
-            })
-
-            paquetes.forEach(paquete => {
-                const detalles = paquete.querySelector('.detalles')
-                const detallesHeight = detalles.offsetHeight
-                detalles.style.height = `${detallesHeight}px`
-                detalles.classList.add('hidden')
-
-                paquete.addEventListener('click', () => {
-                    detalles.classList.toggle('hidden')
-                })
-            })
-
-            buttonsPaquetes.forEach(buttonPaquete => {
-                buttonPaquete.addEventListener('click', () => {
-                    vistaFormulario.querySelector('#paquete_selecionado').value = buttonPaquete.parentNode.parentNode.querySelector('.title').textContent
-                    vistaFormulario.classList.add('active')
-                })
-            })
-            buttonCerrarFormulario.addEventListener('click', () => {
-                vistaFormulario.classList.remove('active')
-            })
-
-            buttonSubmitFormulario.addEventListener('click', (e) => {
-                e.preventDefault()
-                const name = vistaFormulario.querySelector('#name')
-                const email = vistaFormulario.querySelector('#email')
-                const paqueteSelecionado = vistaFormulario.querySelector('#paquete_selecionado').value
-
-                name.parentNode.classList.remove('error')
-                inputTlf.parentNode.classList.remove('error')
-                email.parentNode.classList.remove('error')
-
-                if (name.value == '') {
-                    name.parentNode.classList.add('error')
-                    return
-                }
-
-                if (email.value == '' && inputTlf.value == '') {
-                    vistaFormulario.querySelector('.formulario').classList.add('error')
-                    return
-                } else {
-                    if (!iti.isValidNumber() && inputTlf.value != '') {
-                        inputTlf.parentNode.parentNode.classList.add('error')
-                        return
-                    }
-
-                    const regexEmail = /[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+/
-                    if (!regexEmail.test(email.value) && email.value != '') {
-                        email.parentNode.classList.add('error')
-                        return
-                    }
-                }
-
-                // ENVIAR DATA A API
-                const data = {
-                    paquete: paqueteSelecionado,
-                    nombre: name.value.trim(),
-                    telefono: inputTlf.value.trim(),
-                    correo: email.value.trim()
-                }
-
-                console.log(data)
-
-                document.querySelector('.messaje_pos_send').classList.add('active')
-
-                setTimeout(() => {
-                    buttonCerrarFormulario.click()
-                    document.querySelector('.messaje_pos_send').classList.remove('active')
-                    inputTlf.value = ''
-                    name.value = ''
-                    email.value = ''
-                }, 5000)
-            })
-
-
-            // INDICADOR
-
-            window.addEventListener('scroll', ()=> {
-                document.querySelectorAll('section').forEach(section => {
-                    if(section.getClientRects()[0].top < headerHeight + 10 && section.getClientRects()[0].top > headerHeight - 10){
-                        const index = parseInt(section.dataset.indicador)
-                        setIndicador(index)
-                    }else if(section.getClientRects()[0].bottom < innerHeight / 2 + 10 && section.getClientRects()[0].bottom > innerHeight / 2 - 10){
-                        const index = parseInt(section.dataset.indicador)
-                        setIndicador(index)
-                    }
-                })
-            })
-
-            function setIndicador(index){
-                indicador.querySelectorAll('span').forEach((span, i) => {
-                    if (i < index) {
-                        span.style.transform = 'translateY(-200%)'
-                    } else if (i > index) {
-                        span.style.transform = 'translateY(0%)'
-                    } else {
-                        span.style.transform = 'translateY(-100%)'
-                    }
-                })
-            }
-
-
-            // PORTADASPortafolioCards
-            portadasPortafolioCards.forEach(portada => {
-                gsap.timeline({
-                    scrollTrigger: {
-                        trigger: portada,
-                        pin: false,
-                        start: "center center",
-                        scrub: 0
-                    }
-                }).to(portada.querySelector('img'), 1, {
-                    yPercent: -50
-                }, "+=0")
-            })
-
-
-            // LIBRERIA TELEFONO
-            const resetInputTlf = () => {
-                inputTlf.parentNode.parentNode.classList.remove('error')
-            }
-
-            inputTlf.addEventListener('blur', () => {
-                resetInputTlf()
-                if (inputTlf.value.trim()) {
-                    if (!iti.isValidNumber()) {
-                        inputTlf.parentNode.parentNode.classList.add('error')
-                    }
-                }
-            });
-
-            inputTlf.addEventListener('change', resetInputTlf);
-            inputTlf.addEventListener('keyup', resetInputTlf);
-        })
-    </script>
+		var script = document.createElement('script');
+		if(window.innerWidth >= 1024){
+			script.setAttribute('src','./js/desktop.js');
+		}else{
+			script.setAttribute('src','./js/mobile.js');
+		}
+		document.body.appendChild(script);
+	</script>
+    <!-- <script src="./js/desktop.js"></script> -->
+    <!-- <script src="./js/mobile.js"></script> -->
 </body>
 
 </html>

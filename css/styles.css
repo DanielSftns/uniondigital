@@ -14,6 +14,18 @@ body {
     font-family: 'ProximaNova';
 }
 
+/* Scroll Personalizado */
+
+body::-webkit-scrollbar {
+	width: 10px;
+    background: none;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #C2DFE3;
+	border-radius: 10px;
+}
+
 p{
     line-height: calc(1em * 1.618);
 }
@@ -246,6 +258,10 @@ header .logo{
     margin-bottom: 0.5em;
     text-align: left;
 }
+.nosotros .for_dektop,
+.nosotros .play{
+    display: none;
+}
 
 .nosotros img {
     width: 50%;
@@ -261,23 +277,23 @@ header .logo{
 
 .miembro{
     width: 100%;
-}
-
-.miembro .header {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 15em;
-    margin-bottom: 1em;
+    grid-template-areas:
+        'imagen info info'
+        'texto texto texto';
     align-items: center;
+    row-gap: 1em;
 }
 
 .miembro .avatar{
-    height: 100%;
+    height: 30vh;
+    grid-area: imagen;
 }
 
 .miembro .info {
     text-align: center;
     line-height: 1.7em;
+    grid-area: info;
 }
 
 .miembro .name {
@@ -325,9 +341,13 @@ header .logo{
 .icon.icon-github{
     background-image: url('../img/github-icon-1.svg');
 }
+.icon.icon-linkedin{
+    background-image: url('../img/linkedin-icon.svg');
+}
 
 .miembro .quote {
     font-size: 1.2em;
+    grid-area: texto;
 }
 
 
@@ -357,7 +377,7 @@ header .logo{
     position: relative;
 }
 
-.formulario .close{
+.close{
     position: absolute;
     z-index: 2;
     top: 5px;
@@ -369,6 +389,7 @@ header .logo{
     background-size: contain;
     outline: none;
     border: none;
+    cursor: pointer;
 }
 
 .formulario .title{
@@ -457,4 +478,393 @@ header .logo{
     color: #595959;
     border-radius: 5px;
     overflow: hidden;
+}
+
+.vista_modal_card{
+    display: none;
+}
+section .controls{
+    display: none;
+}
+.hero::after{
+    display: none;
+}
+
+@media (min-width: 1024px){
+    header{
+        padding: 1em 4em;
+        position: relative;
+    }
+    .container{
+        padding: 0;
+    }
+    header nav{
+        margin-bottom: 0;
+    }
+
+    .indicador{
+        display: none;
+    }
+
+    .menu-icon{
+        display: none;
+    }
+    
+    .menu{
+        width: auto;
+        height: auto;
+        list-style: none;
+        padding: 0 0;
+        text-align: left;
+        font-family: 'ProximaNovaBold';
+        position: unset;
+        z-index: unset;
+        top: 0 !important;
+        left: 0;
+        background-color: rgb(8, 8, 8);
+        transition: none;
+        transform: none;
+        display: flex;
+    }
+
+    .menu li{
+        margin-bottom: 0;
+        margin: 0 1em;
+        font-size: inherit;
+    }
+    .menu .link{
+        cursor: pointer;
+    }
+
+    .hero{
+        position: relative;
+    }
+
+    .hero::after{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 4em;
+        bottom: 2em;
+        height: 5rem;
+        width: 1.5rem;
+        background-image: url('../img/flechas_abajo.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .hero > div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50vh;
+        align-items: center;
+        justify-items: stretch;
+    }
+
+    .hero .copy{
+        margin-bottom: 0;
+        font-size: 1.5em;
+        max-width: 750px;
+    }
+
+    .hero img{
+        height: 100%;
+    }
+
+    section{
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+        padding: 0 4em;
+    }
+    
+    section .controls{
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 2em 4em 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    section .controls .indicador{
+        opacity: 1;
+        font-size: 0.8em;
+        display: inline-block;
+        width: auto;
+    }
+
+    section .controls .arrow{
+        width: 2rem;
+        height: 2rem;
+        border: none;
+        outline: none;
+        display: inline-block;
+        margin: 0 0.25em;
+        background: transparent;
+        background-repeat: no-repeat;
+        background-size: contain;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    section .controls .arrow:active{
+        transform-origin: center;
+        transform: scale(0.9);
+    }
+    section .controls .arrow.disable{
+        opacity: 0.5;
+        transform: none;
+    }
+
+    section .controls .arrow.left{
+        background-image: url('./../img/arrow_left.svg');
+    }
+    section .controls .arrow.right{
+        background-image: url('./../img/arrow_right.svg');
+    }
+
+    .servicios,
+    .portafolio{
+        width: 100%;
+        display: grid;
+        grid-auto-columns: 60%;
+        grid-gap: 10%;
+        grid-auto-flow: column;
+        align-content: center;
+        align-items: center;
+    }
+
+    .card{
+        margin-bottom: 0;
+        transition: transform 1s ease;
+    }
+    .card:hover{
+        cursor: pointer;
+    }
+
+    .card .detalles{
+        display: none;
+    }
+
+    .vista_modal_card{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0, 0.8);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+    }
+    .vista_modal_card.active{
+        display: flex;
+    }
+
+    .modal_card{
+        width: 90%;
+        max-width: 800px;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        color: #595959;
+        position: relative;
+    }
+
+    .modal_card .title{
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+
+    .modal_card .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        margin-bottom: 2em;
+    }
+
+    .modal_card .description{
+        padding: 1em;
+        border-left: 2px solid #595959;
+    }
+
+    .call-to-action:hover{
+        cursor: pointer;
+    }
+    .call-to-action:active{
+        transform-origin: center;
+        transform: scale(0.9);
+    }
+
+    .modal_card .call-to-action{
+        display: block;
+        padding: 1.5em 2em;
+        margin: auto;
+    }
+
+    .vista_formulario .formulario{
+        max-width: 500px;
+    }
+
+    /* portafolio */
+
+    .card .portada.animation img{
+        transition: transform 1s 150ms ease;
+    }
+
+    .card .portada.animation:hover img{
+        transform: translateY(-50%);
+    }
+
+    /* nosotros */
+    .nosotros{
+        display: flex;
+        align-items: center;
+    }
+
+    .nosotros .content{
+        font-size: 1.2em;
+        display: grid;
+        width: 100%;
+        grid-template-columns: 50% 50% 50%;
+        align-items: center;
+        position: relative;
+        transition: transform 1s ease;
+    }
+
+    .nosotros .content .play{
+        width: 2rem;
+        height: 2rem;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        outline: none;
+        border: none;
+        background-image: url('../img/arrow_right.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .nosotros .content .play:active{
+        transform: scale(0.9);
+    }
+
+    .nosotros p {
+        width: 100%;
+        margin-bottom: 0;
+        font-size: 1em;
+    }
+    .nosotros .for_mobile{
+        display: none;
+    }
+    .nosotros .for_dektop{
+        text-align: right;
+        margin-left: auto;
+        max-width: 450px;
+        display: block;
+    }
+
+    .nosotros img{
+        justify-self: end;
+        margin-bottom: 0;
+    }
+
+    /* TEAM */
+    .team{
+        padding: 0;
+    }
+    .miembro{
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+            'imagen info'
+            'imagen texto';
+        align-items: center;
+        row-gap: 5em;
+        column-gap: 10%;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr 2fr;
+        font-size: 0.6em;
+    }
+    
+    .miembro .avatar{
+        height: 60vh;
+        justify-self: flex-end;
+    }
+    
+    .miembro .info {
+        text-align: left;
+    }
+
+    .miembro .name{
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+    .miembro .skills{
+        font-size: 1.8em;
+        border-top: none;
+    }
+    .miembro .contact{
+        justify-content: flex-start;
+    }
+    .miembro .contact .icon{
+        width: 2.5em;
+        height: 2.5em;
+    }
+
+    .miembro .quote{
+        width: 60%;
+        font-size: 1.8em;
+        align-self: flex-start;
+    }
+}
+
+
+@media (min-width: 1440px){
+    .hero .copy{
+        font-size: 2em;
+        max-width: 90%;
+    }
+
+    .nosotros p{
+        font-size: 1.25em;
+        max-width: 540px;
+    }
+
+    .nosotros .content .play{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .miembro{
+        font-size: 0.8em;
+    }
+}
+
+@media (min-width: 1700px){
+    .hero .copy{
+        font-size: 2.5em;
+    }
+    .nosotros p{
+        font-size: 1.5em;
+    }
+
+    .nosotros .content .play{
+        width: 3rem;
+        height: 3rem;
+        bottom: 1rem;
+    }
+
+    .nosotros .for_dektop{
+        max-width: 600px;
+    }
+
+    .miembro{
+        font-size: 1em;
+    }
 }
